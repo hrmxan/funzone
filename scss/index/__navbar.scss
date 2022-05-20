@@ -1,0 +1,175 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+  }
+}
+
+.burger_btn {
+  order: 1;
+}
+
+.logo {
+  order: 2;
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+
+  .logo_brand {
+    height: 35px;
+    object-fit: contain;
+    margin-right: 22px;
+  }
+
+  .logo_name {
+    height: 21px;
+    object-fit: contain;
+  }
+  @media (max-width:991px) {
+    margin-right: 0;
+    .logo_brand {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar_colapse {
+  display: flex;
+  order: 3;
+  flex-grow: 1;
+  visibility: hidden;
+  opacity: 0;
+
+  .navbar_list {
+    display: flex;
+    align-items: center;
+    padding: 0 -20px;
+
+    li {
+      display: flex;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        font-family: 'Krona One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 15px;
+        transition:  .5s ease all;
+        
+        &:hover {
+          background: -webkit-linear-gradient(0deg, #F16B41, #C51841);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+  @media (max-width:991px) {
+    position: fixed;
+    transition: 0.5s ease all;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(30px);
+    z-index: 10;
+    .navbar_list {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateY(-100%);
+      transition: 0.5s;
+      li {
+        margin-right: 0;
+        margin-bottom: 34px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.colapsed {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+      .navbar_list {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.reg__log {
+  display: flex;
+  order: 4;
+  align-items: center;
+  justify-content: flex-end;
+
+  a {
+    &.business {
+      font-family: 'Krona One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 15px;
+      margin-right: 15px;
+      &:hover {
+        background: -webkit-linear-gradient(0deg, #F16B41, #C51841);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &.login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+
+      color: #FFFFFF;
+      z-index: 1;
+      background-image: linear-gradient(90deg, #F16B41, #C51841);
+      background-repeat: no-repeat;
+
+      span {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Krona One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 16px 28px;
+        background-color: $my_cbg;
+        z-index: 2;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        span {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
