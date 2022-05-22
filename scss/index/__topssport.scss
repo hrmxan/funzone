@@ -1,0 +1,139 @@
+.tops__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .img__body {
+    width: 100%;
+    height: 166px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    margin-bottom: 15px;
+  }
+
+  .name {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #EDEDED;
+    margin-bottom: 10px;
+    flex-grow: 1;
+  }
+
+  .type-deagre {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    .type {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #FFFFFF;
+      padding: 5px 8px;
+
+      border: 1px solid transparent;
+      border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+      margin-right: 10px;
+    }
+
+    .deagre {
+      display: flex;
+      align-items: center;
+
+      .star_full {
+        display: flex;
+        width: 12px;
+        height: 12px;
+        background-image: url('../../img/svg/star_full.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 3px;
+      }
+
+      .star_free {
+        display: flex;
+        width: 12px;
+        height: 12px;
+        background-image: url('../../img/svg/star_free.svg');
+        display: flex;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .summa {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+
+  .status {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+
+    .time {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 19px;
+      color: #FFFFFF;
+    }
+
+    .active {
+      width: 71px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Krona One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 4px 8px;
+
+      &.open {
+        background: linear-gradient(84.91deg, #58D172 8.18%, #216A3A 90.36%);
+      }
+      &.closed {
+        background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+      }
+    }
+  }
+}
+.tops__col {
+  margin-bottom: 30px;
+}

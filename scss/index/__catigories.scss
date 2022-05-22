@@ -1,0 +1,66 @@
+.section__title {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 50px;
+  }
+}
+.cat__row {
+  margin-bottom: 64px;
+}
+.cat__col {
+  margin-bottom: 36px;
+}
+
+.cat__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover {
+    img {
+      transform: scale(1.1) rotate(5deg) translateY(-5px) skew(1deg);
+    }
+  }
+
+  img {
+    width: 100px;
+    object-fit: contain;
+    flex-grow: 1;
+    margin-bottom: 14px;
+    transition: 0.5s;
+    @media (min-width: 768px) {
+      width: 150px;
+    }
+  }
+
+  strong {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  span {
+    display: flex;
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  }
+}
