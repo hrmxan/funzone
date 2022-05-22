@@ -2,6 +2,19 @@ body {
   background-color: #091423;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +27,8 @@ body {
   color: #fff;
 }
 
-* ol, * ul {
+* ol,
+* ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,6 +39,40 @@ body {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Krona_One/KronaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/tthoves/TTHoves-Regular.ttf") format("truetype");
+}
+
+.button-free {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+}
+
+.button-free:hover {
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
+}
+
+.button-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.button-full:hover {
+  background-image: linear-gradient(98.07deg, #f16a4100 0.71%, #c5184000 100%);
+  border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
 }
 
 header nav {
@@ -51,6 +99,12 @@ header nav {
   margin-right: 22px;
 }
 
+@media (max-width: 575px) {
+  .logo .logo_brand {
+    height: 25px;
+  }
+}
+
 .logo .logo_name {
   height: 21px;
   object-fit: contain;
@@ -67,10 +121,9 @@ header nav {
 
 .navbar_colapse {
   display: flex;
+  position: relative;
   order: 3;
   flex-grow: 1;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .navbar_colapse .navbar_list {
@@ -104,7 +157,7 @@ header nav {
 }
 
 .navbar_colapse .navbar_list li a:hover {
-  background: -webkit-linear-gradient(0deg, #F16B41, #C51841);
+  background-image: -webkit-linear-gradient(0deg, #F16B41, #C51841);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -112,7 +165,8 @@ header nav {
 @media (max-width: 991px) {
   .navbar_colapse {
     position: fixed;
-    transition: 0.5s ease all;
+    visibility: hidden;
+    opacity: 0;
     top: 0;
     left: 0;
     right: 0;
@@ -138,6 +192,7 @@ header nav {
     margin-bottom: 0;
   }
   .navbar_colapse.colapsed {
+    transition: 0.5s ease-in-out all;
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
@@ -167,7 +222,7 @@ header nav {
 }
 
 .reg__log a.business:hover {
-  background: -webkit-linear-gradient(0deg, #F16B41, #C51841);
+  background-image: -webkit-linear-gradient(0deg, #F16B41, #C51841);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -201,5 +256,139 @@ header nav {
 
 .reg__log a.login:hover span {
   background-color: transparent;
+}
+
+.burger_btn {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.kip_up {
+  background-image: url("../../img/kipup_bg.png");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .kip_up {
+    background-size: 60%;
+    background-position: 10% center;
+  }
+}
+
+@media (min-width: 992px) {
+  .kip_up {
+    background-size: 50%;
+  }
+}
+
+.kip_up .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .kip_up .buttons {
+    justify-content: flex-start;
+  }
+}
+
+.kip_up .buttons a {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 13px 20px;
+}
+
+@media (min-width: 992px) {
+  .kip_up .buttons a {
+    padding: 18px 30px;
+  }
+}
+
+.kip_up .buttons a:first-child {
+  margin-right: 16px;
+}
+
+@media (min-width: 992px) {
+  .kip_up .buttons a:first-child {
+    margin-right: 20px;
+  }
+}
+
+.kipup__titlel {
+  margin-top: 55px;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .kipup__titlel {
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: left;
+  }
+}
+
+.kipup__text {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .kipup__text {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: left;
+  }
+}
+
+.kipup__right {
+  margin-top: 97px;
+}
+
+.kipup__img_fon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.kipup__img_fon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kipup__img_fon .filter__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-image: linear-gradient(180deg, rgba(9, 20, 35, 0) 0%, rgba(9, 20, 35, 0.63) 20.93%, rgba(9, 20, 35, 0.93) 57.47%, #091423 75.99%);
 }
 /*# sourceMappingURL=main.css.map */

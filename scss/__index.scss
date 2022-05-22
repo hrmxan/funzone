@@ -1,26 +1,77 @@
 $my_cbg: #091423;
+
 body {
-    background-color: $my_cbg;
+  background-color: $my_cbg;
 }
+
+// clear margin
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
 * {
-    padding: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ol,
+  ul {
+    list-style: none;
     margin: 0;
-    box-sizing: border-box;
-    position: relative;
-    a {
-        text-decoration: none;
-        color: #fff;
-    }
-    ol, ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+    padding: 0;
+  }
 }
 
 @font-face {
-    font-family: 'Krona One';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Krona_One/KronaOne-Regular.ttf') format('truetype');
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Krona_One/KronaOne-Regular.ttf') format('truetype');
+}
+// omport fommt TT Hoves
+@font-face {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/tthoves/TTHoves-Regular.ttf') format('truetype');
+}
+
+.button-free {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+  &:hover {
+    background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+    border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
+  }
+}
+
+.button-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  &:hover {
+    background-image: linear-gradient(98.07deg, #f16a4100 0.71%, #c5184000 100%);;
+    border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+  }
 }
