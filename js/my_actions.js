@@ -7,10 +7,12 @@ mute_buttons.forEach(function(item){
 });
 let burgerButton = document.getElementById('burgerButton');
 burgerButton.addEventListener('click', () => {
-    colapsBar.classList.toggle('colapsed');
+    document.body.style.overflow = 'hidden';
+    colapsBar.classList.add('colapsed');
 });
 let closeNav = document.getElementById('closeNav');
 closeNav.addEventListener('click', () => {
+    document.body.style.overflow = 'auto';
     colapsBar.classList.remove('colapsed');
 });
 
