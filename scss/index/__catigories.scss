@@ -15,6 +15,9 @@
 }
 .cat__row {
   margin-bottom: 64px;
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
 }
 .cat__col {
   margin-bottom: 36px;

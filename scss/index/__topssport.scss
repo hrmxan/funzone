@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
   &:hover {
     img {
       transform: scale(1.1);
@@ -128,12 +129,76 @@
       &.open {
         background: linear-gradient(84.91deg, #58D172 8.18%, #216A3A 90.36%);
       }
+
       &.closed {
         background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
       }
     }
   }
 }
+
 .tops__col {
   margin-bottom: 30px;
+}
+
+.tops__row {
+  margin-bottom: 34px;
+
+}
+
+//  cent aboute line
+
+.cent__aboute_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+  @media (min-width: 768px) {
+    margin-bottom: 130px;
+  }
+
+  .left {
+    justify-content: flex-end;
+  }
+
+  .right {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  strong {
+    display: flex;
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    color: #FFFFFF;
+    width: calc(50% - 6px);
+
+    @media (min-width: 768px) {
+      width: calc(100% - 26px);
+    }
+    @media (min-width: 992px) {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 44px;
+    }
+  }
+
+  span {
+    width: 2px;
+    height: 64px;
+    display: flex;
+    background-image: linear-gradient(#F16B41, #C51841);
+    margin: 0 10px;
+
+    @media (min-width: 768px) {
+      width: 3px;
+      height: 100px;
+      margin: 0 50px;
+    }
+  }
 }

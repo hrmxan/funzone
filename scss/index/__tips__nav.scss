@@ -1,0 +1,72 @@
+.tips__nav_nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+
+  .nav__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    @media (min-width: 992px) {
+      flex-direction: column;
+      overflow: initial;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      flex-shrink: 0;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #FFFFFF;
+      padding: 12px 4px;
+      margin-right: 20px;
+      @media (min-width: 992px) {
+        font-size: 18px;
+        margin-bottom: 6px;
+        margin-right: 0;
+      }
+      span {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        transition: 0.5s;
+        background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+        margin-right: 0;
+        @media (min-width: 992px) {
+          position: relative;
+          left: initial;
+          bottom: initial;
+          transform: translateX(0);
+        }
+      }
+      &.active {
+        span {
+          width: 100%;
+          @media (min-width: 992px) {
+            width: 50px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.tips__nav_row {
+  align-items: flex-start;
+}
