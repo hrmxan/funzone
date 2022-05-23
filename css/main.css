@@ -230,10 +230,10 @@ header nav {
 }
 
 .navbar_colapse_bar {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -252,7 +252,7 @@ header nav {
   justify-content: space-around;
 }
 
-.navbar_colapse_bar .navbar_list {
+.navbar_colapse_bar .navbar_list_bar {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -260,12 +260,12 @@ header nav {
   transition: 0.5s;
 }
 
-.navbar_colapse_bar .navbar_list li {
+.navbar_colapse_bar .navbar_list_bar li {
   margin-right: 0;
   margin-bottom: 34px;
 }
 
-.navbar_colapse_bar .navbar_list li:last-child {
+.navbar_colapse_bar .navbar_list_bar li:last-child {
   margin-bottom: 0;
 }
 
@@ -276,25 +276,25 @@ header nav {
   opacity: 1;
 }
 
-.navbar_colapse_bar.colapsed .navbar_list {
+.navbar_colapse_bar.colapsed .navbar_list_bar {
   transform: translateY(0);
 }
 
-.navbar_colapse_bar .navbar_list {
+.navbar_colapse_bar .navbar_list_bar {
   display: flex;
   align-items: center;
   padding: 0 -20px;
 }
 
-.navbar_colapse_bar .navbar_list li {
+.navbar_colapse_bar .navbar_list_bar li {
   display: flex;
 }
 
-.navbar_colapse_bar .navbar_list li:last-child {
+.navbar_colapse_bar .navbar_list_bar li:last-child {
   margin-right: 0;
 }
 
-.navbar_colapse_bar .navbar_list li a {
+.navbar_colapse_bar .navbar_list_bar li a {
   display: flex;
   align-items: center;
   font-family: 'Krona One';
@@ -309,7 +309,7 @@ header nav {
   transition: .5s ease all;
 }
 
-.navbar_colapse_bar .navbar_list li a:hover {
+.navbar_colapse_bar .navbar_list_bar li a:hover {
   background-image: -webkit-linear-gradient(0deg, #F16B41, #C51841);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -669,6 +669,7 @@ header nav {
 }
 
 .cent__aboute_body {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -908,6 +909,11 @@ footer {
   border-radius: 100%;
   border: 1px solid rgba(255, 255, 255, 0.25);
   margin-right: 14px;
+  transition: 0.5s;
+}
+
+.brend__links .links a:hover {
+  border-color: #fff;
 }
 
 .brend__links .links a:last-child {

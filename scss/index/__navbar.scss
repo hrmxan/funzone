@@ -152,10 +152,10 @@ header {
 }
 
 .navbar_colapse_bar {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -172,7 +172,7 @@ header {
     justify-content: space-around;
   }
 
-  .navbar_list {
+  .navbar_list_bar {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -195,12 +195,12 @@ header {
     visibility: visible;
     opacity: 1;
 
-    .navbar_list {
+    .navbar_list_bar {
       transform: translateY(0);
     }
   }
 
-  .navbar_list {
+  .navbar_list_bar {
     display: flex;
     align-items: center;
     padding: 0 -20px;
