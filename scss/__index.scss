@@ -2,6 +2,10 @@ $my_cbg: #091423;
 
 body {
   background-color: $my_cbg;
+  position: relative;
+}
+header,main,footer {
+  position: relative;
 }
 
 // clear margin
