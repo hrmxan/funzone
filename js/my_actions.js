@@ -1,3 +1,7 @@
+AOS.init();
+
+
+
 let colapsBar = document.getElementById('colapsBar');
 let mute_buttons = document.querySelectorAll('.mute_buttons');
 mute_buttons.forEach(function(item){
@@ -24,5 +28,12 @@ tips__nav_item.forEach(item => {
         }
         );
         item.classList.add('active');
+    });
+});
+
+let accardion = document.querySelectorAll('.accardion');
+accardion.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('closed');
     });
 });
