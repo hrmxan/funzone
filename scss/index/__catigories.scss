@@ -31,6 +31,9 @@
     img {
       transform: scale(1.1) rotate(5deg) translateY(-5px) skew(1deg);
     }
+    strong {
+      transform: translateY(-2px) scale(1.05);
+    }
   }
 
   img {
@@ -53,6 +56,7 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 10px;
+    transition: 0.5s;
 
     @media (min-width: 768px) {
       font-size: 20px;
