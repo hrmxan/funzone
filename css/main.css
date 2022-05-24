@@ -3,7 +3,9 @@ body {
   position: relative;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   position: relative;
 }
 
@@ -78,6 +80,57 @@ li {
 .button-full:hover {
   background-image: linear-gradient(98.07deg, #f16a4100 0.71%, #c5184000 100%);
   border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+}
+
+.body__filterbg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.body__filterbg .red {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  left: 54px;
+  top: 107px;
+  background: #f2544c;
+  filter: blur(150px);
+}
+
+.body__filterbg .blue {
+  position: absolute;
+  width: 300px;
+  height: 120px;
+  right: 30px;
+  top: 700px;
+  background: #1bbbebd2;
+  opacity: 0.8;
+  filter: blur(150px);
+}
+
+.body__filterbg .green {
+  position: absolute;
+  width: 300px;
+  height: 164px;
+  left: 50%;
+  top: 1358px;
+  transform: translateX(-50%);
+  background: #13D602;
+  opacity: 0.5;
+  filter: blur(150px);
+}
+
+.body__filterbg .orange {
+  position: absolute;
+  width: 250px;
+  height: 212px;
+  left: 0;
+  top: 2482px;
+  background: #F24CA6;
+  opacity: 0.7;
+  filter: blur(150px);
 }
 
 header nav {
@@ -421,6 +474,7 @@ header nav {
 
 .kipup__right {
   margin-top: 97px;
+  z-index: -1;
 }
 
 .kipup__img_fon {
@@ -1075,5 +1129,205 @@ footer {
   .copyread {
     margin-top: 0;
   }
+}
+
+body.login {
+  min-height: 100vh;
+}
+
+.login__title {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__row {
+  margin-bottom: 30px;
+}
+
+.form__row label {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.form__row .input_body {
+  display: flex;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) 10;
+  padding: 0 15px 0 20px;
+  height: 54px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+  .form__row .input_body {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.form__row .input_body img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.form__row .input_body img.first {
+  margin-right: 10px;
+}
+
+.form__row .input_body img.seen {
+  cursor: pointer;
+}
+
+.form__row .input_body input {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  border: none;
+  background: transparent;
+  height: 100%;
+  outline: none;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.form__row .forget {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.orline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.orline p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin: 0 10px;
+}
+
+.orline span {
+  display: flex;
+  height: 2px;
+  flex-grow: 1;
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.login__links {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 575px) {
+  .login__links {
+    margin-bottom: 30px;
+  }
+}
+
+.login__links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  background: linear-gradient(271.79deg, #06071C 0%, rgba(22, 22, 26, 0) 99.8%);
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) 10;
+  padding: 0 15px 0 20px;
+  transition: 0.5s;
+}
+
+@media (max-width: 575px) {
+  .login__links a {
+    margin-bottom: 30px;
+  }
+}
+
+.login__links a:hover {
+  background: linear-gradient(98.07deg, rgba(241, 107, 65, 0.3) 0.71%, rgba(197, 24, 65, 0.3) 100%);
+}
+
+.login__links a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 22px;
+}
+
+.login__regist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.login__regist a {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  min-width: 160px;
+  height: 54px;
+  margin-right: 20px;
+}
+
+.login__regist a:last-child {
+  margin-right: 0;
+}
+
+.regist__past__title {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.deta__input {
+  letter-spacing: 3px;
 }
 /*# sourceMappingURL=main.css.map */
