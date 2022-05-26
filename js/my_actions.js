@@ -70,8 +70,7 @@ try {
     let maskOptions = {
       deta: {
         mask: Date,
-        lazy: 'click',
-        autofix: true,
+        autofix: false,
         blocks: {
           d: {
             mask: IMask.MaskedRange,
@@ -89,7 +88,7 @@ try {
           },
           Y: {
             mask: IMask.MaskedRange,
-            placeholderChar: 'y',
+            placeholderChar: 'Y',
             from: 1900,
             to: 2999,
             maxLength: 4
@@ -102,6 +101,96 @@ try {
     }
   });
 
+} catch (error) {
+  console.log(error);
+}
+try {
+  let phone__input = document.querySelectorAll('.phone__input');
+  phone__input.forEach(item => {
+    let maskOptions = {
+      phone: {
+        mask: "+998 (00) 000 00 00",
+        lazy: false,
+        placeholderChar: "-",
+      },
+    };
+    if (item) {
+      IMask(item, maskOptions.phone);
+    }
+  });
+
+} catch (error) {
+  console.log(error);
+}
+try {
+  let radio__labels = document.querySelectorAll('.radio__labels');
+  radio__labels.forEach(item => {
+    item.addEventListener('click', () => {
+      if (item.childNodes[1].value == 'on') {
+        radio__labels.forEach(e => {
+          e.childNodes[3].classList.remove('checked')
+        });
+        item.childNodes[3].classList.add('checked');
+      }
+    });
+  });
+} catch (error) {
+  // console.log(error);
+}
+
+try {
+  window.onload = function () {
+    slideOne();
+    slideTwo();
+  }
+
+  let sliderOne = document.getElementById("slider-1");
+  let sliderTwo = document.getElementById("slider-2");
+  let displayValOne = document.getElementById("range1");
+  let displayValTwo = document.getElementById("range2");
+  let minGap = 0;
+  let sliderTrack = document.querySelector(".slider-track");
+  let sliderMaxValue = document.getElementById("slider-1").max;
+  let range_btn1 = sliderTrack.childNodes[1];
+  let range_btn2 = sliderTrack.childNodes[3];
+  console.log(range_btn1, range_btn2);
+  function slideOne() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+      sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    displayValOne.textContent = sliderOne.value;
+    fillColor();
+  }
+
+  function slideTwo() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+      sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    displayValTwo.textContent = sliderTwo.value;
+    fillColor();
+  }
+
+  function fillColor() {
+    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    range_btn1.style.left = percent1 + "%";
+    range_btn2.style.right = 100 - percent2 + "%";
+    sliderTrack.style.background = `linear-gradient(to right, #fff ${percent1}% , #F16B41 ${percent1}% , #C51841 ${percent2}%, #fff ${percent2}%)`;
+  }
+} catch (error) {
+  console.log(error);
+}
+try {
+  let filter_select = document.querySelectorAll('.filter_select');
+  filter_select.forEach(item => {
+    item.addEventListener('click', () => {
+      filter_select.forEach(e => {
+        if (e != item) e.classList.remove('drobon');
+      });
+      item.classList.toggle('drobon');
+      console.log(item);
+    });
+  });
 } catch (error) {
   console.log(error);
 }

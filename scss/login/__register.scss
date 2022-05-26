@@ -7,6 +7,70 @@
   color: #FFFFFF;
   margin-bottom: 30px;
 }
+
 .deta__input {
   letter-spacing: 3px;
+}
+
+.radio__labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 60px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  input {
+    display: none;
+  }
+
+  .mask {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid transparent;
+    border-image: linear-gradient(134deg, #fff, rgba(255, 255, 255, 0)) 10;
+    transition: 0.2s;
+    &::before {
+      content: '';
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      background-color: #fff;
+      transition: 0.2s;
+    }
+    &.checked {
+      background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+      border-image: linear-gradient(134deg, #fad3c7, #C51841) 0.5;
+      &::before {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+}
+.label__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 60px;
+  .mask {
+    margin-right: 15px;
+  }
+  img {
+    margin-right: 10px;
+  }
+}
+.regist {
+  padding-bottom: 180px;
+  .input_body {
+    margin-bottom: 30px;
+  }
 }
