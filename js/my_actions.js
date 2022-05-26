@@ -154,20 +154,29 @@ try {
   let range_btn1 = sliderTrack.childNodes[1];
   let range_btn2 = sliderTrack.childNodes[3];
   console.log(range_btn1, range_btn2);
+
   function slideOne() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    try {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+      }
+      displayValOne.textContent = sliderOne.value;
+      fillColor();
+    } catch (error) {
+      console.log(error);
     }
-    displayValOne.textContent = sliderOne.value;
-    fillColor();
   }
 
   function slideTwo() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    try {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+      }
+      displayValTwo.textContent = sliderTwo.value;
+      fillColor();
+    } catch (error) {
+      console.log(error);
     }
-    displayValTwo.textContent = sliderTwo.value;
-    fillColor();
   }
 
   function fillColor() {
@@ -190,6 +199,25 @@ try {
       item.classList.toggle('drobon');
       console.log(item);
     });
+  });
+} catch (error) {
+  console.log(error);
+}
+try {
+  let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 } catch (error) {
   console.log(error);

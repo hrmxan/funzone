@@ -1869,4 +1869,270 @@ input[type="range"]:active::-webkit-slider-thumb {
   left: 50%;
   transform: translate(-50%, -10px);
 }
+
+.insport_top .top_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.insport_top h1 {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+}
+
+.insport_top .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.insport_top .buttons a {
+  padding: 0 30px;
+  height: 54px;
+  margin-left: 20px;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.main__card_img {
+  width: 100%;
+  max-height: 400px;
+}
+
+.main__card_slider {
+  margin-top: 20px;
+  padding: 0 46px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 85px;
+  object-fit: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+  width: 36px;
+  height: 36px;
+}
+
+.swiper-button-next::after img,
+.swiper-button-prev::after img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.main__card_about .post_title {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #EDEDED;
+  margin-bottom: 20px;
+}
+
+.main__card_about p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+.main__card_right_line {
+  margin-bottom: 40px;
+}
+
+.main__card_right_line .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.main__card_right_line .top img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.main__card_right_line .deagre {
+  display: flex;
+  align-items: center;
+}
+
+.main__card_right_line .deagre .star_full {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/svg/star_full.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+
+.main__card_right_line .deagre .star_free {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/svg/star_free.svg");
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+
+.main__card_work .active {
+  margin-left: 20px;
+  width: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 4px 8px;
+}
+
+.main__card_work .active.open {
+  background: linear-gradient(84.91deg, #58D172 8.18%, #216A3A 90.36%);
+}
+
+.main__card_work .active.closed {
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.main__card_work p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.main__card_work p span {
+  margin-right: 20px;
+}
+
+.main__card_work p span:last-child {
+  margin-right: 0;
+}
+
+.main__card_phone .numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.main__card_phone .numbers span {
+  height: 25px;
+  width: 2px;
+  background-image: linear-gradient(#F16B41, #C51841);
+  margin: 0 10px;
+}
+
+.main__card_locate p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.mapouter__insports {
+  position: relative;
+  text-align: right;
+  height: 100%;
+  height: 250px;
+}
+
+.mapouter__insports iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.mapouter__insports .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <title>funzone</title>
+</head>
+
+<body>
+  <div class="body__filterbg">
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+  </div>
+
+  <header>
+    <section id="colapsBar" class="colapse-menu navbar_colapse_bar">
+      <div class=" container">
+        <ul class="navbar_list_bar">
+          <li class="navbar_item"><a href="#">Order arena</a></li>
+          <li class="navbar_item"><a href="#">Features</a></li>
+          <li class="navbar_item"><a href="#">About us</a></li>
+        </ul>
+        <a id="closeNav" class="closenav d-flex d-lg-none" href="#">
+          <img src="./img/svg/close-circle.svg" alt="close">
+        </a>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav data-aos="fade-down">
+        <a id="burgerButton" class="d-flex d-lg-none burger_btn mute_buttons" href="#">
+          <img src="./img/svg/burger_button.svg" alt="burger">
+        </a>
+        <a href="index.html" class="logo">
+          <img class="logo_brand" src="./img/svg/logo_brand.svg" alt="logo">
+          <img class="logo_name d-none d-xl-flex" src="./img/svg/logo_name.svg" alt="logo">
+        </a>
+        <div class="navbar_colapse d-none d-lg-flex">
+          <ul class="navbar_list">
+            <li class="navbar_item"><a href="#">Order arena</a></li>
+            <li class="navbar_item"><a href="#">Features</a></li>
+            <li class="navbar_item"><a href="#">About us</a></li>
+          </ul>
+          <a id="closeNav" class="closenav d-flex d-lg-none" href="#">
+            <img src="./img/svg/close-circle.svg" alt="close">
+          </a>
+        </div>
+        <div class="reg__log">
+          <a class="business d-none d-lg-flex" href="#">Apply As Business</a>
+          <a class="login d-none d-lg-flex" href="login.html">
+            <span>Log In</span>
+          </a>
+          <a class="d-flex d-lg-none" href="#">
+            <img src="./img/svg/log_user.svg" alt="user">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="insport_top">
+      <div class="container">
+        <div class="top_title">
+          <h1>The name of Sport Complex</h1>
+          <div class="buttons">
+            <a class="button-free" href="#">Save</a>
+            <a class="button-full" href="#">Reserve</a>
+          </div>
+        </div>
+        <div class="row top__body_row">
+          <div class="col-8">
+            <img src="./img/insport_main_card.png" class="main__card_img" alt="main_card">
+            </img>
+            <div class="main__card_slider">
+              <div class="swiper-button-next">
+                <img src="./img/svg/next.svg" alt="back">
+              </div>
+              <div class="swiper-button-prev">
+                <img src="./img/svg/back.svg" alt="back">
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card2.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card3.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card4.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card4.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card3.png" alt="main_mini">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/main__mini__card2.png" alt="main_mini">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main__card_about">
+              <div class="post_title">
+                <img src="./img/svg/list.svg" alt="ic">
+                Description
+              </div>
+              <p>
+                Minifootball is the most popular played sport in the world. What separates football from minifootball is
+                the size of the pitch, goals and number of players. Minifootball is played across the globe in different
+                versions of 5,6,7,8aside mainly on artificial grass but also on natural grass. It is the most widespread
+                sport in the world, which many millions of amateur players play on a regular basis all year round.
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="main__card_rate main__card_right_line">
+              <div class="top">
+                <img src="./img/svg/star.svg" alt="star">
+                Rate
+              </div>
+              <span class="deagre">
+                <span class="star_full"></span>
+                <span class="star_full"></span>
+                <span class="star_full"></span>
+                <span class="star_free"></span>
+                <span class="star_free"></span>
+              </span>
+            </div>
+            <div class="main__card_work main__card_right_line">
+              <div class="top">
+                <img src="./img/svg/clock.svg" alt="star">
+                Working Hours
+                <span class="active open">Open</span>
+              </div>
+              <p><span>MON - SUN</span><span>06:00-24:00</span></p>
+            </div>
+            <div class="main__card_phone main__card_right_line">
+              <div class="top">
+                <img src="./img/svg/phone.svg" alt="star">
+                Phone Number
+              </div>
+              <div class="numbers">
+                <p>+ 998 99 000 00 09</p>
+                <span></span>
+                <p>+ 998 71 200 00 00</p>
+              </div>
+            </div>
+            <div class="main__card_locate main__card_right_line">
+              <div class="top">
+                <img src="./img/svg/Location.svg" alt="star">
+                Location
+              </div>
+              <p>Shayxontohur district, Beruniy street near to Evos</p>
+              <div class="mapouter__insports">
+                <div class="gmap_canvas"><iframe id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=toshkent%20axborot%20tehnalogiyalari%20universituti&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="top__line"></div>
+      <div class="row">
+        <div class="col-12 col-lg-4 brend__links">
+          <a href="index.html" class="logo_f">
+            <img class="brend" src="./img/svg/logo_brand.svg" alt="logo">
+            <img class="name" src="./img/svg/logo_name.svg" alt="logo">
+          </a>
+          <div class="links">
+            <a href="#">
+              <img src="./img/svg/fb.svg" alt="phone">
+            </a>
+            <a href="#">
+              <img src="./img/svg/linked.svg" alt="phone">
+            </a>
+            <a href="#">
+              <img src="./img/svg/twit.svg" alt="phone">
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-2">
+          <div class="accardion closed mute_buttons">
+            <strong class="accardion__title">
+              <a href="#">
+                <span>Order arena</span>
+                <span class="plus"><img src="./img/svg/plus.svg" alt="plus_ic"></span>
+              </a>
+            </strong>
+            <ul>
+              <li class="accardion__item">
+                <a href="#">
+                  Top arenas
+                </a>
+              </li>
+              <li class="accardion__item">
+                <a href="#">
+                  Most rated arenas
+                </a>
+              </li>
+              <li class="accardion__item">
+                <a href="#">
+                  Now available arenas
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-2">
+          <div class="accardion closed mute_buttons">
+            <strong class="accardion__title">
+              <a href="#">
+                <span>Features</span>
+                <span class="plus"><img src="./img/svg/plus.svg" alt="plus_ic"></span>
+              </a>
+            </strong>
+            <ul>
+              <li class="accardion__item">
+                <a href="#">
+                  Our features
+                </a>
+              </li>
+              <li class="accardion__item">
+                <a href="#">
+                  Easy ordering
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-2">
+          <div class="accardion closed mute_buttons">
+            <strong class="accardion__title">
+              <a href="#">
+                <span>About us</span>
+                <span class="plus"><img src="./img/svg/plus.svg" alt="plus_ic"></span>
+              </a>
+            </strong>
+            <ul>
+              <li class="accardion__item">
+                <a href="#">
+                  Contact us
+                </a>
+              </li>
+              <li class="accardion__item">
+                <a href="#">
+                  Subscribe
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-2">
+          <div class="accardion closed mute_buttons border-0">
+            <strong class="accardion__title">
+              <a href="#">
+                <span>legal</span>
+                <span class="plus"><img src="./img/svg/plus.svg" alt="plus_ic"></span>
+              </a>
+            </strong>
+            <ul>
+              <li class="accardion__item">
+                <a href="#">
+                  Privacy Policy
+                </a>
+              </li>
+              <li class="accardion__item">
+                <a href="#">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12">
+          <p class="copyread">
+            © 2021 Lift Media. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+
+
+
+    </div>
+  </footer>
+
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/my_actions.js"></script>
+</body>
+
+</html>
