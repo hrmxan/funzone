@@ -191,13 +191,13 @@ try {
 }
 try {
   let filter_select = document.querySelectorAll('.filter_select');
+
   filter_select.forEach(item => {
     item.addEventListener('click', () => {
       filter_select.forEach(e => {
-        if (e != item) e.classList.remove('drobon');
+        if (e!=item) e.classList.remove('drobon');
       });
       item.classList.toggle('drobon');
-      console.log(item);
     });
   });
 } catch (error) {
