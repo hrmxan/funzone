@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>funzone</title>
+</head>
+
+<body class="reservation">
+  <div class="body__filterbg">
+    <div class="red"></div>
+    <div class="blue"></div>
+  </div>
+
+  <header>
+    <section id="colapsBar" class="colapse-menu navbar_colapse_bar">
+      <div class=" container">
+        <ul class="navbar_list_bar">
+          <li class="navbar_item"><a href="#">Order arena</a></li>
+          <li class="navbar_item"><a href="#">Features</a></li>
+          <li class="navbar_item"><a href="#">About us</a></li>
+        </ul>
+        <a id="closeNav" class="closenav d-flex d-lg-none" href="#">
+          <img src="./img/svg/close-circle.svg" alt="close">
+        </a>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav data-aos="fade-down">
+        <a id="burgerButton" class="d-flex d-lg-none burger_btn mute_buttons" href="#">
+          <img src="./img/svg/burger_button.svg" alt="burger">
+        </a>
+        <a href="index.html" class="logo">
+          <img class="logo_brand" src="./img/svg/logo_brand.svg" alt="logo">
+          <img class="logo_name d-none d-xl-flex" src="./img/svg/logo_name.svg" alt="logo">
+        </a>
+        <div class="navbar_colapse d-none d-lg-flex">
+          <ul class="navbar_list">
+            <li class="navbar_item"><a href="#">Order arena</a></li>
+            <li class="navbar_item"><a href="#">Features</a></li>
+            <li class="navbar_item"><a href="#">About us</a></li>
+          </ul>
+          <a id="closeNav" class="closenav d-flex d-lg-none" href="#">
+            <img src="./img/svg/close-circle.svg" alt="close">
+          </a>
+        </div>
+        <div class="reg__log">
+          <a class="business d-none d-lg-flex" href="#">Apply As Business</a>
+          <a class="login d-none d-lg-flex" href="login.html">
+            <span>Log In</span>
+          </a>
+          <a class="d-flex d-lg-none" href="#">
+            <img src="./img/svg/log_user.svg" alt="user">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="kip_up regist reservation">
+      <div class="container">
+        <h1 data-aos="fade-up" class="kipup__titlel login__title">
+          Reservation
+        </h1>
+        <form class="login__form">
+          <div class="row form__row">
+
+            <div data-aos="fade-up" class="col-12 col-sm-6 col-lg-3">
+              <label for="detainput">Date</label>
+              <div class="input_body">
+                <img class="first" src="./img/svg/deta.svg" alt="user_icon">
+                <input class="deta__input" type="text" id="detainput" placeholder="dd/mm/yyyy">
+              </div>
+            </div>
+
+            <div data-aos="fade-up" class="col-12 col-sm-6 col-lg-3">
+              <label for="fullname">Select time</label>
+              <div class="input_body">
+                <img class="first" src="./img/svg/clock_d.svg" alt="user_icon">
+                <input type="text" id="fullname">
+              </div>
+            </div>
+            
+          </div>
+          <div data-aos="fade-up" class="login__regist">
+            <a class="button-free" href="#">Back</a>
+            <a class="button-full" href="confirm__num.html">Continue</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/imask.js"></script>
+  <script src="./js/my_actions.js"></script>
+</body>
+
+</html>

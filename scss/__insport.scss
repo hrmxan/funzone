@@ -264,19 +264,206 @@
     margin-bottom: 20px;
   }
 }
+
 .mapouter__insports {
   position: relative;
   text-align: right;
   height: 100%;
   height: 250px;
+
   iframe {
     width: 100%;
     height: 100%;
   }
+
   .gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 100%;
     width: 100%;
+  }
+}
+
+// calendar uchun
+
+.fc-event-title-container {
+  // background-color: #F14141;
+}
+
+.fc-timegrid-event-harness {}
+
+.fc-timegrid-event-harness-inset {
+  background-color: #d6bebe;
+}
+
+.fc-event-main {
+  // background-color: #0b0808;
+}
+
+// calaendar end 
+
+.secelted__insport {
+  margin-top: 76px;
+  margin-bottom: 100px;
+}
+
+.card__select__insport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-left: 11px solid transparent;
+  position: relative;
+  padding: 15px;
+  background: linear-gradient(115.22deg, #191926 0%, #263344 100.47%);
+  box-shadow: 0px 20px 20px rgba(8, 1, 49, 0.41);
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+
+  }
+
+  .name__zone {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: space-between;
+
+    strong {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    p {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 19px;
+      color: #EDEDED;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .other {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    p {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 19px;
+      color: #EDEDED;
+      margin-bottom: 12px;
+    }
+
+    strong {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 19px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.inssport__h3 {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.other__zones {
+  margin-bottom: 70px;
+
+  .tops__row {
+    margin-bottom: 0;
+  }
+}
+
+.clients__say__card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid;
+  height: 100%;
+  justify-content: space-between;
+  border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+
+  .message {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #EDEDED;
+    margin-bottom: 37px;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 100%;
+      margin-right: 15px;
+    }
+
+    .name {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: #EDEDED;
+      margin-bottom: 8px;
+    }
+
+    .time {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #EDEDED;
+    }
   }
 }

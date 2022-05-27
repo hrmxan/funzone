@@ -42,6 +42,7 @@ body.login {
     height: 54px;
     align-items: center;
     margin-bottom: 10px;
+
     @media (max-width: 575px) {
       width: 100%;
       margin-bottom: 30px;
@@ -116,9 +117,11 @@ body.login {
 
 .login__links {
   margin-bottom: 60px;
+
   @media (max-width: 575px) {
     margin-bottom: 30px;
   }
+
   a {
     display: flex;
     flex-direction: row;
@@ -132,6 +135,7 @@ body.login {
     line-height: 19px;
     color: #FFFFFF;
     border: 2px solid transparent;
+
     @media (max-width: 575px) {
       margin-bottom: 30px;
     }
@@ -167,12 +171,50 @@ body.login {
     font-size: 12px;
     line-height: 18px;
     color: #FFFFFF;
-    min-width: 160px;
     height: 54px;
     padding: 0 34px;
     margin-right: 20px;
+
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.pay__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(98.07deg, rgba(241, 107, 65, 0.4) 0.71%, rgba(197, 24, 65, 0.4) 100%);
+  padding: 17px 20px;
+  border: 2px solid;
+  border-image: linear-gradient(90.99deg, rgba(255, 255, 255, 0.5) 0.09%, rgba(255, 255, 255, 0) 100%) 10;
+  p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #EDEDED;
+    margin-bottom: 9px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+  }
+
+  strong {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
   }
 }
