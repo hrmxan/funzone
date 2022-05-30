@@ -365,15 +365,22 @@
         width: 16px;
         height: 16px;
         object-fit: contain;
+        margin-right: 4px;
       }
     }
+  }
+
+  .secelted__insport {
+    display: flex;
+    flex-direction: row;
   }
 
   .other {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    flex-shrink: 0;
+    margin-left: 10px;
 
     p {
       font-family: 'TT Hoves';
@@ -392,6 +399,37 @@
       font-size: 12px;
       line-height: 19px;
       color: #FFFFFF;
+    }
+  }
+}
+.card__select__insport_wrap {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  .card__select__insport {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+  .cansel_button {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+    span {
+      background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
   }
 }

@@ -1,0 +1,162 @@
+.label__tip__bus {
+  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  label {
+    margin: 0;
+  }
+}
+
+.per__reg__inp__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  label {
+    margin-top: 10px;
+  }
+}
+
+.my__zone_col {
+  height: 100%;
+}
+
+.my__zone_card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  img {
+    width: initial;
+    max-width: 80%;
+  }
+
+  a {
+    width: 100%;
+    padding: 18px;
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+}
+
+.regist__past__title {
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
+}
+
+.input_body {
+  .select__value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+}
+
+.my__select {
+  position: relative;
+
+  .select__options {
+    position: absolute;
+    top: calc(100% + 20px);
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    border: 2px solid transparent;
+    border-image: linear-gradient(90.99deg, rgba(255, 255, 255, 0.5) 0.09%, rgba(255, 255, 255, 0) 100%) 10;
+    padding: 10px 15px;
+    background-image: linear-gradient(90deg, #303844, #303844);
+    z-index: 10;
+    transition: 0.5s;
+
+    label {
+      padding: 10px 15px;
+    }
+
+  }
+
+  &.select__open {
+    .select__options {
+      top: calc(100% + 10px);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.bus_btn {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 30px;
+}
+
+.bus__zone_sport {
+  margin-bottom: 0;
+}
+
+.file__input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 15px;
+  border: 1px dashed;
+  border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+  max-width: 450px;
+  margin-bottom: 30px;
+
+  input {
+    display: none;
+  }
+
+  span.file_upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 25px;
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: 0.5px solid transparent;
+    border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+    padding: 8px 16px;
+    cursor: pointer;
+
+
+    background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+    box-shadow: 0px 1px 2px rgba(6, 25, 56, 0.05);
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      object-fit: contain;
+    }
+  }
+
+  .input_body {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #EDEDED;
+  }
+}

@@ -1,0 +1,368 @@
+.personal__row {
+  margin-top: 100px;
+  align-items: flex-start;
+
+}
+
+.per__nav_col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    .per__title {
+      margin-top: 30px;
+    }
+
+    span.per__line {
+      height: 1px;
+      width: 100%;
+      margin-bottom: 30px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+span.per__line {
+  width: 1px;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  margin: 0 30px 0 0;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.personal__nav {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+
+
+  li {
+    display: flex;
+    width: 100%;
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 15px 20px;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      color: #FFFFFF;
+      border: 1px solid transparent;
+
+      &.active {
+        border: 1px solid transparent;
+        border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+        background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+
+        linearGradient {
+          stop {
+            stop-color: #ffff;
+          }
+        }
+      }
+
+      svg {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: row;
+
+    li {
+      a {
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.table_scroll {
+  overflow-x: scroll;
+  position: relative;
+
+
+}
+
+.per__booking_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 30px;
+
+  tr {
+    border-bottom: 1px solid #DC4441;
+
+    &.last {
+      border-bottom: none;
+
+      td,
+      th {
+        border-bottom: 1px solid #DC4441;
+      }
+    }
+
+    td,
+    th {
+      width: 118px;
+      height: 70px;
+      flex-shrink: 1;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      border-top: 1px solid #DC4441;
+      border-left: 1px solid #DC4441;
+
+      &:first-child {
+        border-left: 1px solid #DC4441;
+      }
+    }
+
+    th {
+      border-top: none;
+      padding: 10px;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 19px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #EDEDED;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+
+    td {
+      min-width: 100px;
+
+      .mask {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 10px);
+        opacity: 0;
+        visibility: hidden;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+        z-index: 10;
+        transition: 0.5s;
+
+        strong {
+          font-family: 'TT Hoves';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 19px;
+          color: #FFFFFF;
+
+        }
+
+        a {
+          position: relative;
+          display: flex;
+          font-family: 'Krona One';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          text-align: center;
+          padding: 8px;
+          background-color: rgba(255, 255, 255, 0.85);
+
+          span {
+            background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          border-left: 11px solid transparent;
+          border-right: 11px solid transparent;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid #DE4741;
+          top: -16px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &.booked {
+        &:hover {
+          .mask {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      a.booking__link {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding: 4px;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+
+        span {
+          display: flex;
+          display: flex;
+          width: 20%;
+          height: 100%;
+          background-color: rgba($color: #F14141, $alpha: 0.5);
+        }
+
+        &:focus {
+          span {
+            width: calc(20% - 4px);
+          }
+        }
+      }
+    }
+  }
+
+  &.insport__table {
+    .ht_time {
+      padding: 0;
+      padding-bottom: 10px;
+    }
+
+    td {
+      padding: 0;
+      padding: 2px 0;
+    }
+
+    td.bookeding {
+      .bookeding_body {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+
+        span {
+          display: flex;
+          height: 100%;
+          width: calc(100% / 12);
+
+          &.booked {
+            background: rgba($color: #F14141, $alpha: 0.5);
+          }
+
+          &.booked_now {
+            background: rgba($color: #37C756, $alpha: 0.2);
+
+            &.start {
+              border-left: 1px dashed #EDEDED;
+            }
+
+            &.end {
+              border-right: 1px dashed #EDEDED;
+            }
+          }
+
+          &.start {
+            width: calc((100% / 12) - 1px);
+            margin-left: 1px;
+          }
+
+          &.end {
+            width: calc((100% / 12) - 1px);
+            margin-right: 1px;
+          }
+        }
+      }
+    }
+
+    .th__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: 'TT Hoves';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+      }
+
+      .times {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+
+        span {
+          display: flex;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.log__out_ask {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}

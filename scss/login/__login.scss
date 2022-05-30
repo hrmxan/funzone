@@ -140,10 +140,14 @@ body.login {
       margin-bottom: 30px;
     }
 
-    background: linear-gradient(271.79deg, #06071C 0%, rgba(22, 22, 26, 0) 99.8%);
+    background: linear-gradient(98.07deg, rgba(241, 107, 65, 0.3) 0.71%, rgba(197, 24, 65, 0.3) 100%);
     border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) 10;
     padding: 0 15px 0 20px;
     transition: 0.5s;
+
+    &.last {
+      background: linear-gradient(271.79deg, #06071C 0%, rgba(22, 22, 26, 0) 99.8%);
+    }
 
     &:hover {
       background: linear-gradient(98.07deg, rgba(241, 107, 65, 0.3) 0.71%, rgba(197, 24, 65, 0.3) 100%);

@@ -1,0 +1,37 @@
+.label__tip__bus {
+  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  label {
+    margin: 0;
+  }
+}
+.per__reg__inp__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  label {
+    margin-top: 10px;
+  }
+}
+.my__zone_col {
+  height: 100%;
+}
+.my__zone_card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  img {
+    width: initial;
+    max-width: 80%;
+  }
+  a {
+    width: 100%;
+    padding: 18px;
+  }
+}
+.regist__past__title {
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
+}

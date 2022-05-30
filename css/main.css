@@ -1271,7 +1271,7 @@ body.login {
   line-height: 19px;
   color: #FFFFFF;
   border: 2px solid transparent;
-  background: linear-gradient(271.79deg, #06071C 0%, rgba(22, 22, 26, 0) 99.8%);
+  background: linear-gradient(98.07deg, rgba(241, 107, 65, 0.3) 0.71%, rgba(197, 24, 65, 0.3) 100%);
   border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) 10;
   padding: 0 15px 0 20px;
   transition: 0.5s;
@@ -1281,6 +1281,10 @@ body.login {
   .login__links a {
     margin-bottom: 30px;
   }
+}
+
+.login__links a.last {
+  background: linear-gradient(271.79deg, #06071C 0%, rgba(22, 22, 26, 0) 99.8%);
 }
 
 .login__links a:hover {
@@ -2244,13 +2248,20 @@ input[type="range"]:active::-webkit-slider-thumb {
   width: 16px;
   height: 16px;
   object-fit: contain;
+  margin-right: 4px;
+}
+
+.card__select__insport .secelted__insport {
+  display: flex;
+  flex-direction: row;
 }
 
 .card__select__insport .other {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
+  flex-shrink: 0;
+  margin-left: 10px;
 }
 
 .card__select__insport .other p {
@@ -2270,6 +2281,42 @@ input[type="range"]:active::-webkit-slider-thumb {
   font-size: 12px;
   line-height: 19px;
   color: #FFFFFF;
+}
+
+.card__select__insport_wrap {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card__select__insport_wrap .card__select__insport {
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.card__select__insport_wrap .cansel_button {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card__select__insport_wrap .cansel_button img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.card__select__insport_wrap .cansel_button span {
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .inssport__h3 {
@@ -2348,5 +2395,554 @@ body.reservation {
   background-image: url("../img/reserv_bg.png");
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.reservation__pay {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-bottom: 36px;
+}
+
+.pay__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.pay__card__type {
+  display: flex;
+  width: 130px;
+  height: 70px;
+  padding: 0 23px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.pay__card__type:hover {
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%) 10;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.pay__card__type:hover img {
+  transform: scale(1.1);
+}
+
+.pay__card__type img {
+  max-width: 100%;
+  object-fit: contain;
+  transition: 0.5s;
+}
+
+.personal__row {
+  margin-top: 100px;
+  align-items: flex-start;
+}
+
+.per__nav_col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .per__nav_col {
+    flex-direction: column;
+  }
+  .per__nav_col .per__title {
+    margin-top: 30px;
+  }
+  .per__nav_col span.per__line {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 30px;
+    top: 0;
+    left: 0;
+  }
+}
+
+span.per__line {
+  width: 1px;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  margin: 0 30px 0 0;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.personal__nav {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.personal__nav li {
+  display: flex;
+  width: 100%;
+}
+
+.personal__nav li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.personal__nav li a.active {
+  border: 1px solid transparent;
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.personal__nav li a.active linearGradient stop {
+  stop-color: #ffff;
+}
+
+.personal__nav li a svg {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .personal__nav {
+    flex-direction: row;
+  }
+  .personal__nav li a {
+    align-items: center;
+    justify-content: center;
+  }
+  .personal__nav li a svg {
+    margin: 0;
+  }
+}
+
+.table_scroll {
+  overflow-x: scroll;
+  position: relative;
+}
+
+.per__booking_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 30px;
+}
+
+.per__booking_table tr {
+  border-bottom: 1px solid #DC4441;
+}
+
+.per__booking_table tr.last {
+  border-bottom: none;
+}
+
+.per__booking_table tr.last td,
+.per__booking_table tr.last th {
+  border-bottom: 1px solid #DC4441;
+}
+
+.per__booking_table tr td,
+.per__booking_table tr th {
+  width: 118px;
+  height: 70px;
+  flex-shrink: 1;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  border-top: 1px solid #DC4441;
+  border-left: 1px solid #DC4441;
+}
+
+.per__booking_table tr td:first-child,
+.per__booking_table tr th:first-child {
+  border-left: 1px solid #DC4441;
+}
+
+.per__booking_table tr th {
+  border-top: none;
+  padding: 10px;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #EDEDED;
+}
+
+.per__booking_table tr th:first-child {
+  border-left: none;
+}
+
+.per__booking_table tr td {
+  min-width: 100px;
+}
+
+.per__booking_table tr td .mask {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 10px);
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.per__booking_table tr td .mask strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.per__booking_table tr td .mask a {
+  position: relative;
+  display: flex;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.per__booking_table tr td .mask a span {
+  background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-clip: text;
+}
+
+.per__booking_table tr td .mask::after {
+  content: '';
+  position: absolute;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid #DE4741;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.per__booking_table tr td.booked:hover .mask {
+  opacity: 1;
+  visibility: visible;
+}
+
+.per__booking_table tr td a.booking__link {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 4px;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.per__booking_table tr td a.booking__link span {
+  display: flex;
+  display: flex;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(241, 65, 65, 0.5);
+}
+
+.per__booking_table tr td a.booking__link:focus span {
+  width: calc(20% - 4px);
+}
+
+.per__booking_table.insport__table .ht_time {
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.per__booking_table.insport__table td {
+  padding: 0;
+  padding: 2px 0;
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span {
+  display: flex;
+  height: 100%;
+  width: calc(100% / 12);
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span.booked {
+  background: rgba(241, 65, 65, 0.5);
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span.booked_now {
+  background: rgba(55, 199, 86, 0.2);
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span.booked_now.start {
+  border-left: 1px dashed #EDEDED;
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span.booked_now.end {
+  border-right: 1px dashed #EDEDED;
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span.start {
+  width: calc((100% / 12) - 1px);
+  margin-left: 1px;
+}
+
+.per__booking_table.insport__table td.bookeding .bookeding_body span.end {
+  width: calc((100% / 12) - 1px);
+  margin-right: 1px;
+}
+
+.per__booking_table.insport__table .th__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.per__booking_table.insport__table .th__body .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.per__booking_table.insport__table .th__body .top img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.per__booking_table.insport__table .th__body .times {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.per__booking_table.insport__table .th__body .times span {
+  display: flex;
+  padding: 0 5px;
+}
+
+.log__out_ask {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.label__tip__bus {
+  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label__tip__bus label {
+  margin: 0;
+}
+
+.per__reg__inp__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.per__reg__inp__col label {
+  margin-top: 10px;
+}
+
+.my__zone_col {
+  height: 100%;
+}
+
+.my__zone_card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.my__zone_card img {
+  width: initial;
+  max-width: 80%;
+}
+
+.my__zone_card a {
+  width: 100%;
+  padding: 18px;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .regist__past__title {
+    margin-top: 30px;
+  }
+}
+
+.input_body .select__value {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.my__select {
+  position: relative;
+}
+
+.my__select .select__options {
+  position: absolute;
+  top: calc(100% + 20px);
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90.99deg, rgba(255, 255, 255, 0.5) 0.09%, rgba(255, 255, 255, 0) 100%) 10;
+  padding: 10px 15px;
+  background-image: linear-gradient(90deg, #303844, #303844);
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.my__select .select__options label {
+  padding: 10px 15px;
+}
+
+.my__select.select__open .select__options {
+  top: calc(100% + 10px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.bus_btn {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 30px;
+}
+
+.bus__zone_sport {
+  margin-bottom: 0;
+}
+
+.file__input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 15px;
+  border: 1px dashed;
+  border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.file__input input {
+  display: none;
+}
+
+.file__input span.file_upload {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 25px;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+  border: 0.5px solid transparent;
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  box-shadow: 0px 1px 2px rgba(6, 25, 56, 0.05);
+}
+
+.file__input span.file_upload img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+.file__input .input_body {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #EDEDED;
 }
 /*# sourceMappingURL=main.css.map */

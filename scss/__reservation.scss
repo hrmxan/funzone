@@ -1,5 +1,48 @@
 body.reservation {
-    background-image: url('../img/reserv_bg.png');
-    background-position: center bottom;
-    background-repeat: no-repeat;
+  background-image: url('../img/reserv_bg.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.reservation__pay {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-bottom: 36px;
+}
+
+.pay__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.pay__card__type {
+  display: flex;
+  width: 130px;
+  height: 70px;
+  padding: 0 23px;
+  border: 2px solid transparent;
+
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  &:hover {
+    border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%) 10;
+    background: rgba(255, 255, 255, 0.25);
+    img {
+      transform: scale(1.1);
+    }
+  }
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+  }
 }

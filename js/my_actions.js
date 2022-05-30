@@ -11,7 +11,7 @@ try {
     });
   });
 } catch (error) {
-  console.log(error);
+  
 }
 
 try {
@@ -26,7 +26,7 @@ try {
     colapsBar.classList.remove('colapsed');
   });
 } catch (error) {
-  console.log(error);
+  
 }
 
 try {
@@ -50,7 +50,7 @@ try {
     });
   });
 } catch (error) {
-  console.log(error);
+  
 }
 
 try {
@@ -62,7 +62,7 @@ try {
     });
   });
 } catch (error) {
-  console.log(error);
+  
 }
 try {
   let deta__input = document.querySelectorAll('.deta__input');
@@ -102,7 +102,7 @@ try {
   });
 
 } catch (error) {
-  console.log(error);
+  
 }
 try {
   let phone__input = document.querySelectorAll('.phone__input');
@@ -120,7 +120,7 @@ try {
   });
 
 } catch (error) {
-  console.log(error);
+  
 }
 try {
   let radio__labels = document.querySelectorAll('.radio__labels');
@@ -135,7 +135,7 @@ try {
     });
   });
 } catch (error) {
-  // console.log(error);
+  // 
 }
 
 try {
@@ -163,7 +163,7 @@ try {
       displayValOne.textContent = sliderOne.value;
       fillColor();
     } catch (error) {
-      console.log(error);
+      
     }
   }
 
@@ -175,7 +175,7 @@ try {
       displayValTwo.textContent = sliderTwo.value;
       fillColor();
     } catch (error) {
-      console.log(error);
+      
     }
   }
 
@@ -187,7 +187,7 @@ try {
     sliderTrack.style.background = `linear-gradient(to right, #fff ${percent1}% , #F16B41 ${percent1}% , #C51841 ${percent2}%, #fff ${percent2}%)`;
   }
 } catch (error) {
-  console.log(error);
+  
 }
 try {
   let filter_select = document.querySelectorAll('.filter_select');
@@ -202,7 +202,7 @@ try {
     });
   });
 } catch (error) {
-  console.log(error);
+  
 }
 try {
   let swiper = new Swiper(".mySwiper", {
@@ -221,7 +221,7 @@ try {
     },
   });
 } catch (error) {
-  console.log(error);
+  
 }
 
 
@@ -229,110 +229,57 @@ try {
 
 
 try {
-  document.addEventListener('DOMContentLoaded', function () {
-    var calendarEl = document.getElementById('calendar');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'timeGridWeek',
-      titleFormat: { // will produce something like "Tuesday, September 18, 2018"
-        month: 'long',
-        year: 'numeric',
-        day: 'numeric',
-        weekday: 'long'
-      },
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
-      },
-      initialDate: '2020-09-12',
-      navLinks: true, // can click day/week names to navigate views
-      selectable: true,
-      selectMirror: true,
-      select: function (arg) {
-        var title = prompt('Event Title:');
-        if (title) {
-          calendar.addEvent({
-            title: title,
-            start: arg.start,
-            end: arg.end,
-            allDay: arg.allDay
-          })
-        }
-        calendar.unselect()
-      },
-      eventClick: function (arg) {
-        console.log(arg);
-        if (confirm('Are you sure you want to delete this event?')) {
-          arg.event.remove()
-        }
-      },
-      editable: true,
-      dayMaxEvents: true, // allow "more" link when too many events
-      // eventColor: '#F14141',
-      // eventBackgroundColor: '#37c7564f',
-      // events: [{
-      //     title: 'All Day Event',
-      //     start: '2020-09-01'
-      //   },
-      //   {
-      //     title: 'Long Event',
-      //     start: '2020-09-07',
-      //     end: '2020-09-10'
-      //   },
-      //   {
-      //     groupId: 999,
-      //     title: 'Repeating Event',
-      //     start: '2020-09-09T16:00:00'
-      //   },
-      //   {
-      //     groupId: 999,
-      //     title: 'Repeating Event',
-      //     start: '2020-09-16T16:00:00'
-      //   },
-      //   {
-      //     title: 'Conference',
-      //     start: '2020-09-11',
-      //     end: '2020-09-13'
-      //   },
-      //   {
-      //     title: 'Meeting',
-      //     start: '2020-09-12T10:30:00',
-      //     end: '2020-09-12T12:30:00'
-      //   },
-      //   {
-      //     title: 'Lunch',
-      //     start: '2020-09-12T12:00:00'
-      //   },
-      //   {
-      //     title: 'Meeting',
-      //     start: '2020-09-12T14:30:00'
-      //   },
-      //   {
-      //     title: 'Happy Hour',
-      //     start: '2020-09-12T17:30:00'
-      //   },
-      //   {
-      //     title: 'Dinner',
-      //     start: '2020-09-12T20:00:00'
-      //   },
-      //   {
-      //     title: 'Birthday Party',
-      //     start: '2020-09-13T07:00:00'
-      //   },
-      //   {
-      //     title: 'Click for Google',
-      //     url: 'http://google.com/',
-      //     start: '2020-09-28'
-      //   }
-      // ]
+  let personal__navA = document.querySelectorAll('.personal__nav a');
+  personal__navA.forEach(item => {
+    item.addEventListener('click', () => {
+      personal__navA.forEach(e => {
+        e.classList.remove('active');
+      });
+      item.classList.add('active');
     });
-
-    console.log(calendar);
-
-    calendar.render();
   });
-
 } catch (error) {
-  console.log(error);
+  
+}
+
+try {
+  let insport__tableRow = document.querySelectorAll('.insport__table tbody tr');
+  insport__tableRow.forEach(item => {
+    let mause_in = false;
+    item.addEventListener('mousedown', () => {
+      mause_in = true;
+      console.log(mause_in);
+      let time_spans = document.querySelectorAll('.insport__table .bookeding span');
+      if (mause_in) {
+        time_spans.forEach(e => {
+          e.addEventListener('mouseover', () => {
+            if (mause_in) {
+              e.classList.add('booked_now');
+            }
+          });
+        });
+      }
+    });
+    item.addEventListener('mouseup', () => {
+      mause_in = false;
+      console.log(mause_in);
+    });
+    item.addEventListener('mouseleave', () => {
+      mause_in = false;
+      console.log(mause_in);
+    });
+  });
+} catch (error) {
+  
+}
+
+try {
+  let my__select = document.querySelectorAll('.my__select');
+  my__select.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('select__open');
+    });
+  });
+} catch (error) {
+  
 }
