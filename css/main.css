@@ -2945,4 +2945,404 @@ span.per__line {
   align-items: center;
   color: #EDEDED;
 }
+
+.bus__week_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.bus__week_nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  padding: 18px;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+  margin-right: 10px;
+}
+
+.bus__week_nav a:last-child {
+  margin-right: 0;
+}
+
+.bus__week_nav a.active, .bus__week_nav a:hover {
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.bus__week_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 40px;
+}
+
+.bus__week_table:last-child {
+  margin-bottom: 60px;
+}
+
+.bus__week_table tr {
+  border-bottom: 1px solid #DC4441;
+}
+
+.bus__week_table tr.last {
+  border-bottom: none;
+}
+
+.bus__week_table tr.last td,
+.bus__week_table tr.last th {
+  border-bottom: 1px solid #DC4441;
+}
+
+.bus__week_table tr td,
+.bus__week_table tr th {
+  width: 118px;
+  height: 70px;
+  flex-shrink: 1;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  border-top: 1px solid #DC4441;
+  border-left: 1px solid #DC4441;
+}
+
+.bus__week_table tr td:first-child,
+.bus__week_table tr th:first-child {
+  border-left: 1px solid #DC4441;
+}
+
+.bus__week_table tr th {
+  border-top: none;
+  padding: 10px;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #EDEDED;
+}
+
+.bus__week_table tr th .th_body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bus__week_table tr th .th_body img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.bus__week_table tr th:first-child {
+  border-left: none;
+}
+
+.bus__week_table tr td {
+  min-width: 100px;
+}
+
+.bus__week_table tr.top td {
+  border: none;
+  height: initial;
+  position: relative;
+}
+
+.bus__week_table tr.top td span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #EDEDED;
+  position: relative;
+  left: 100%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.bus__week_table tr.body td {
+  padding: 2px;
+}
+
+.bus__week_table tr.body td .situation {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.bus__week_table tr.body td .situation .control__body {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  min-width: 221px;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.bus__week_table tr.body td .situation .control__body::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -18px;
+  border-bottom: 9px solid #33904B;
+  border-top: 9px solid transparent;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 60px;
+  cursor: pointer;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+  margin-bottom: 21px;
+  text-align: justify;
+  color: #FFFFFF;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels:last-child {
+  margin-right: 0;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels input {
+  display: none;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels .mask {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid transparent;
+  border-image: linear-gradient(134deg, #fff, rgba(255, 255, 255, 0)) 10;
+  transition: 0.2s;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels .mask::before {
+  content: '';
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels .mask.checked {
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  border-image: linear-gradient(134deg, #fad3c7, #C51841) 0.5;
+}
+
+.bus__week_table tr.body td .situation .control__body .checkbox__labels .mask.checked::before {
+  width: 8px;
+  height: 8px;
+}
+
+.bus__week_table tr.body td .situation .control__body .sum_input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid;
+  border-image: linear-gradient(90.99deg, #FFFFFF 0.09%, rgba(255, 255, 255, 0) 100%) 20;
+  margin-bottom: 15px;
+}
+
+.bus__week_table tr.body td .situation .control__body .sum_input img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.bus__week_table tr.body td .situation .control__body .sum_input input {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  display: flex;
+  height: 100%;
+  flex-shrink: 1;
+}
+
+.bus__week_table tr.body td .situation .control__body .sum_input input::placeholder {
+  color: #FFFFFF;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.bus__week_table tr.body td .situation .control__body a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+}
+
+.bus__week_table tr.body td .situation .control__body a span {
+  display: flex;
+  background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bus__week_table tr.body td .situation.closed {
+  background: linear-gradient(109.8deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 100%);
+}
+
+.bus__week_table tr.body td .situation.free:hover {
+  background: linear-gradient(84.91deg, rgba(55, 199, 86, 0.3) 8.18%, rgba(49, 103, 67, 0.3) 90.36%);
+}
+
+.bus__week_table tr.body td .situation.free:hover .control__body {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+
+.do__you_ask {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.regist__past__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.regist__past__title img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.cat__row .title strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.cat__row .title p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.add_zone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.add_zone .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.add_zone .left p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.add_zone .right {
+  display: flex;
+  flex-direction: row;
+}
+
+.add_zone .right a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.add_zone .right a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 /*# sourceMappingURL=main.css.map */

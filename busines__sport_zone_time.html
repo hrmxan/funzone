@@ -197,76 +197,572 @@
           </div>
           <div class="col-12 col-md-8 col-lg-9 per__nav_col">
             <span class="per__line"></span>
-            <h3 class="regist__past__title">Creating a sport zone</h3>
+            <h3 class="regist__past__title">Setting works hour and price</h3>
             <form class="login__form">
-              <label for="fileinput" class="file__input">
-                <input id="fileinput" type="file">
-                <span class=" file_upload">
-                  <img src="./img/svg/Export.svg" alt="export">
-                  Upload pictures
-                </span>
-                <div class="input_body">
-                  <span>this is your file</span>
-                </div>
-              </label>
-              <div class="row form__row bus__zone_sport">
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="my__select">
-                    <label for="detainput">Zone type</label>
-                    <div class="input_body">
-                      <img class="first" src="./img/svg/sportzone.svg" alt="user_icon">
-                      <span class="select__value">Football stadium</span>
-                      <img class="first" src="./img/svg/vniz.svg" alt="user_icon">
-                    </div>
-                    <div class="select__options">
-                      <label for="sportZone">
-                        <input type="range">
-                        Football stadium1
-                      </label>
-                      <label for="sportZone">
-                        <input type="range">
-                        Football stadium1
-                      </label>
-                      <label for="sportZone">
-                        <input type="range">
-                        Football stadium1
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <label for="fullname">Full name</label>
-                  <div class="input_body">
-                    <img class="first" src="./img/svg/user.svg" alt="user_icon">
-                    <input type="text" id="fullname" placeholder="First and Second name">
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-end">
-                  <a class="button-free bus_btn" href="#">Show on map</a>
-                </div>
+              <div class="bus__week_nav">
+                <a class="mute_buttons active" href="#">
+                  Mon
+                </a>
+                <a class="mute_buttons" href="#">
+                  Tue
+                </a>
+                <a class="mute_buttons" href="#">
+                  Wed
+                </a>
+                <a class="mute_buttons" href="#">
+                  Thu
+                </a>
+                <a class="mute_buttons" href="#">
+                  Fri
+                </a>
+                <a class="mute_buttons" href="#">
+                  Sat
+                </a>
+                <a class="mute_buttons" href="#">
+                  Sun
+                </a>
               </div>
-              <div class="row form__row">
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <label for="detainput">Telephone number</label>
-                  <div class="input_body">
-                    <img class="first" src="./img/svg/tel_ic.svg" alt="user_icon">
-                    <input class="phone__input" type="text" id="detainput" placeholder="+ 998 (--) --- -- --">
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <label for="detainput">Telephone number</label>
-                  <div class="input_body">
-                    <img class="first" src="./img/svg/tel_ic.svg" alt="user_icon">
-                    <input class="phone__input" type="text" id="detainput" placeholder="+ 998 (--) --- -- --">
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-end">
-                  <a class="button-free bus_btn" href="#">Add number</a>
-                </div>
+              <div class="table_scroll">
+                <table class="bus__week_table">
+                  <tbody>
+                    <tr class="top">
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                    </tr>
+                    <tr class="body">
+                      <th>
+                        <div class="th_body">
+                          <img src="./img/svg/Shade.svg" alt="wether_ic">
+                          Morning
+                        </div>
+                      </th>
+                      <td>
+                        <div class="situation mute_buttons closed">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="bus__week_table">
+                  <tbody>
+                    <tr class="top">
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                    </tr>
+                    <tr class="body">
+                      <th>
+                        <div class="th_body">
+                          <img src="./img/svg/Shade.svg" alt="wether_ic">
+                          Morning
+                        </div>
+                      </th>
+                      <td>
+                        <div class="situation mute_buttons closed">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="bus__week_table">
+                  <tbody>
+                    <tr class="top">
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                      <td>
+                        <span>3:00</span>
+                      </td>
+                    </tr>
+                    <tr class="body last">
+                      <th>
+                        <div class="th_body">
+                          <img src="./img/svg/Shade.svg" alt="wether_ic">
+                          Morning
+                        </div>
+                      </th>
+                      <td>
+                        <div class="situation mute_buttons closed">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <div class="situation mute_buttons free">
+                          <div class="control__body">
+                            <label class="checkbox__labels first" for="workcheck">
+                              <input value="work" id="workcheck"type="checkbox">
+                              <span class="mask checked"></span>
+                              Does not work
+                            </label>
+                            <div class="sum_input">
+                              <img src="./img/svg/wallet.svg" alt="sum">
+                              <input type="text" placeholder="Price">
+                            </div>
+                            <a class="mute_buttons" href="#"><span>That’s Good</span></a>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <div class="login__regist">
                 <a class="button-free" href="busines__zone.html">Back</a>
-                <a class="button-full" href="confirm__num.html">Next step</a>
+                <a class="button-full" href="confirm__num.html">Next Day</a>
+              </div>
+              <h1 class="do__you_ask">Fill with previous day times ?</h1>
+              <div class="login__regist">
+                <a class="button-free" href="busines__zone.html">yes</a>
+                <a class="button-full" href="confirm__num.html">no</a>
               </div>
             </form>
           </div>

@@ -283,3 +283,19 @@ try {
 } catch (error) {
   
 }
+try {
+  let checkbox__labels = document.querySelectorAll('.checkbox__labels');
+  checkbox__labels.forEach(item => {
+    item.addEventListener('click', () => {
+      if (item.childNodes[1].value == 'work') {
+        item.childNodes[3].classList.remove('checked');
+        item.childNodes[1].value = 'off';
+      } else {
+        item.childNodes[3].classList.add('checked');
+        item.childNodes[1].value = 'work';
+      }
+    });
+  });
+}catch (error) {
+  
+}

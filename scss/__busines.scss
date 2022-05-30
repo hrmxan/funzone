@@ -160,3 +160,415 @@
     color: #EDEDED;
   }
 }
+
+.bus__week_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    padding: 18px;
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+    border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active,
+    &:hover {
+      border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+      background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+    }
+  }
+}
+
+.bus__week_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
+
+  tr {
+    border-bottom: 1px solid #DC4441;
+
+    &.last {
+      border-bottom: none;
+
+      td,
+      th {
+        border-bottom: 1px solid #DC4441;
+      }
+    }
+
+    td,
+    th {
+      width: 118px;
+      height: 70px;
+      flex-shrink: 1;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      border-top: 1px solid #DC4441;
+      border-left: 1px solid #DC4441;
+
+      &:first-child {
+        border-left: 1px solid #DC4441;
+      }
+    }
+
+    th {
+      border-top: none;
+      padding: 10px;
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 19px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #EDEDED;
+
+      .th_body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          object-fit: contain;
+        }
+      }
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+
+    td {
+      min-width: 100px;
+    }
+
+    &.top {
+      td {
+        border: none;
+        height: initial;
+        position: relative;
+
+        span {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          font-family: 'TT Hoves';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 19px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #EDEDED;
+          position: relative;
+          left: 100%;
+          transform: translateX(-50%);
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    &.body {
+      td {
+        padding: 2px;
+
+        .situation {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          cursor: pointer;
+
+          .control__body {
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+            min-width: 221px;
+            z-index: 10;
+            transition: 0.5s;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              top: -18px;
+              border-bottom: 9px solid #33904B;
+              border-top: 9px solid transparent;
+              border-left: 9px solid transparent;
+              border-right: 9px solid transparent;
+            }
+
+            .checkbox__labels {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              margin-right: 60px;
+              cursor: pointer;
+              font-family: 'TT Hoves';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 18px;
+              /* identical to box height, or 112% */
+              margin-bottom: 21px;
+
+              text-align: justify;
+
+              color: #FFFFFF;
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              input {
+                display: none;
+              }
+
+              .mask {
+                display: flex;
+                width: 24px;
+                height: 24px;
+                background-color: rgba(255, 255, 255, 0.15);
+                border: 1px solid transparent;
+                border-image: linear-gradient(134deg, #fff, rgba(255, 255, 255, 0)) 10;
+                transition: 0.2s;
+                background-color: white;
+                margin-right: 10px;
+
+                &::before {
+                  content: '';
+                  display: flex;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 0;
+                  height: 0;
+                  background-color: #fff;
+                  transition: 0.2s;
+                }
+
+                &.checked {
+                  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+                  border-image: linear-gradient(134deg, #fad3c7, #C51841) 0.5;
+
+                  &::before {
+                    width: 8px;
+                    height: 8px;
+                  }
+                }
+              }
+            }
+
+            .sum_input {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 15px 20px;
+              background: rgba(255, 255, 255, 0.3);
+              border: 2px solid;
+
+              border-image: linear-gradient(90.99deg, #FFFFFF 0.09%, rgba(255, 255, 255, 0) 100%) 20;
+              margin-bottom: 15px;
+
+
+
+              img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                object-fit: contain;
+              }
+
+              input {
+                background-color: transparent;
+                outline: none;
+                border: 0;
+                font-family: 'TT Hoves';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+                display: flex;
+                height: 100%;
+                flex-shrink: 1;
+
+                &::placeholder {
+                  color: #FFFFFF;
+                  font-family: 'TT Hoves';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 19px;
+                }
+              }
+            }
+
+            a {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              font-family: 'Krona One';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+              background: rgba(255, 255, 255, 0.85);
+              padding: 20px;
+
+              span {
+                display: flex;
+                background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                // text-fill-color: transparent;
+              }
+            }
+          }
+
+          &.closed {
+            background: linear-gradient(109.8deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 100%);
+          }
+
+          &.free {
+            &:hover {
+              background: linear-gradient(84.91deg, rgba($color: #37C756, $alpha: 0.3) 8.18%, rgba($color: #316743, $alpha: 0.3) 90.36%);
+
+              .control__body {
+                opacity: 1;
+                visibility: visible;
+                top: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.do__you_ask {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.regist__past__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: 20px;
+  }
+}
+
+.cat__row {
+  .title {
+    strong {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: #FFFFFF;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.add_zone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #FFFFFF;
+      opacity: 0.8;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+    }
+  }
+}
