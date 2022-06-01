@@ -65,6 +65,12 @@ li {
   justify-content: center;
   border: 2px solid transparent;
   border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
 
   &:hover {
     background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
@@ -79,6 +85,13 @@ li {
   border: 2px solid transparent;
   border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
   background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #FFFFFF;
 
   &:hover {
     background-image: linear-gradient(98.07deg, #f16a4100 0.71%, #c5184000 100%);

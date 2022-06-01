@@ -1,0 +1,269 @@
+.top_title_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section_mini_title {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.employes_row {
+  margin-bottom: 60px;
+}
+
+.bus__week_nav {
+  overflow-x: scroll;
+}
+
+.colors__control {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .color {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 40px;
+    flex-shrink: 0;
+    margin-bottom: 60px;
+
+    .color__drob {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      border: 1px solid transparent;
+      border-image: linear-gradient(134.7deg, #FFFFFF 1.24%, rgba(255, 255, 255, 0) 99.25%) 10;
+      margin-right: 10px;
+      opacity: 0.5;
+
+      &.dark {
+        background: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      &.green {
+        background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+      }
+
+      &.red {
+        background: #F14141;
+      }
+
+      &.blue {
+        background: linear-gradient(270deg, #234396 0%, #6D86DE 100%);
+      }
+    }
+
+    p {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.monitoring__tabel_control {
+  min-width: 130px !important;
+}
+
+.this__time {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.sport__comp__imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  .img_wrap {
+    width: 169px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px 15px;
+    position: relative;
+
+    .img_cont {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .kres {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #09142388;
+      align-items: center;
+      justify-content: center;
+      visibility: visible;
+      opacity: 0;
+      transition: 0.5s;
+
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        transform: scale(0);
+        transition: 0.5s;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .kres {
+        visibility: visible;
+        opacity: 1;
+
+        img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.uploat__input {
+  margin-bottom: 60px;
+}
+
+.uploat__input_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 23px;
+  border: 1px dashed #F16B41;
+
+  .context {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 20px;
+
+    img {
+      margin-right: 15px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+
+      strong {
+        font-family: 'TT Hoves';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-family: 'TT Hoves';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #EDEDED;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 30px;
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  }
+}
+
+.btn_mini {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: auto;
+  color: #FFFFFF;
+  width: initial;
+  padding: 0 30px;
+
+  &:hover {
+    color: #FFFFFF;
+  }
+}
+
+.monitoring__row_mini_section {
+  margin-bottom: 30px;
+}
+
+.description {
+  h4 {
+    font-family: 'TT Hoves';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+
+  .description__body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    img {
+      opacity: 0.5;
+      margin-right: 10px;
+    }
+
+    p {
+      font-family: 'TT Hoves';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: #FFFFFF;
+    }
+  }
+}

@@ -11,7 +11,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 
 try {
@@ -26,7 +26,7 @@ try {
     colapsBar.classList.remove('colapsed');
   });
 } catch (error) {
-  
+
 }
 
 try {
@@ -50,7 +50,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 
 try {
@@ -62,7 +62,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 try {
   let deta__input = document.querySelectorAll('.deta__input');
@@ -102,7 +102,7 @@ try {
   });
 
 } catch (error) {
-  
+
 }
 try {
   let phone__input = document.querySelectorAll('.phone__input');
@@ -120,7 +120,7 @@ try {
   });
 
 } catch (error) {
-  
+
 }
 try {
   let radio__labels = document.querySelectorAll('.radio__labels');
@@ -163,7 +163,7 @@ try {
       displayValOne.textContent = sliderOne.value;
       fillColor();
     } catch (error) {
-      
+
     }
   }
 
@@ -175,7 +175,7 @@ try {
       displayValTwo.textContent = sliderTwo.value;
       fillColor();
     } catch (error) {
-      
+
     }
   }
 
@@ -187,7 +187,7 @@ try {
     sliderTrack.style.background = `linear-gradient(to right, #fff ${percent1}% , #F16B41 ${percent1}% , #C51841 ${percent2}%, #fff ${percent2}%)`;
   }
 } catch (error) {
-  
+
 }
 try {
   let filter_select = document.querySelectorAll('.filter_select');
@@ -202,7 +202,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 try {
   let swiper = new Swiper(".mySwiper", {
@@ -221,7 +221,7 @@ try {
     },
   });
 } catch (error) {
-  
+
 }
 
 
@@ -239,7 +239,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 
 try {
@@ -270,7 +270,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 
 try {
@@ -281,7 +281,7 @@ try {
     });
   });
 } catch (error) {
-  
+
 }
 try {
   let checkbox__labels = document.querySelectorAll('.checkbox__labels');
@@ -296,6 +296,62 @@ try {
       }
     });
   });
-}catch (error) {
+} catch (error) {
+
+}
+
+try {
+  let imgWrap_kres = document.querySelectorAll('.img_wrap .kres img');
+  imgWrap_kres.forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentNode.parentNode.remove();
+    });
+  });
+} catch (error) {
+
+}
+try {
+  let data = [2000000,900000,561651,5619656,9000000,10000000,6000000,6519616,7165651,19166512,1655155,9819156];
+  let data2 = [72, 28]
   
+let ctx = document.getElementById('myChart');
+let myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+        datasets: [{
+            label: 'Max:',
+            data: data,
+            backgroundColor: [
+              '#0B6BFB'
+            ],
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+let ctx2 = document.getElementById('myChart2');
+let myChart2 = new Chart(ctx2, {
+  type: 'doughnut',
+    data: {
+        // labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+        datasets: [{
+            data: data2,
+            backgroundColor: [
+              '#0B6BFB',
+              'rgba(27, 27, 27, 0.5)'
+            ],
+            borderWidth: 0
+        }]
+    },
+});
+
+
+} catch (error) {
+
 }

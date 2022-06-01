@@ -61,6 +61,12 @@ li {
   justify-content: center;
   border: 2px solid transparent;
   border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
 }
 
 .button-free:hover {
@@ -75,6 +81,12 @@ li {
   border: 2px solid transparent;
   border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
   background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
 }
 
 .button-full:hover {
@@ -877,7 +889,6 @@ header nav {
 
 .tips__nav_row {
   align-items: flex-start;
-  border-style: dashed;
 }
 
 .top__line {
@@ -3252,6 +3263,55 @@ span.per__line {
   background: linear-gradient(109.8deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 100%);
 }
 
+.bus__week_table tr.body td .situation.free_vew {
+  background: linear-gradient(84.91deg, rgba(55, 199, 86, 0.3) 8.18%, rgba(49, 103, 67, 0.3) 90.36%);
+}
+
+.bus__week_table tr.body td .situation .playing_now,
+.bus__week_table tr.body td .situation .left_time {
+  display: none;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.bus__week_table tr.body td .situation .playing_now span,
+.bus__week_table tr.body td .situation .left_time span {
+  font-weight: bold;
+}
+
+.bus__week_table tr.body td .situation.start__now {
+  background: linear-gradient(270deg, #23449671 0%, #6d86de79 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bus__week_table tr.body td .situation.start__now .playing_now,
+.bus__week_table tr.body td .situation.start__now .left_time {
+  display: block;
+}
+
+.bus__week_table tr.body td .situation.start__now:hover .control__body {
+  background: linear-gradient(270deg, #234396 0%, #6D86DE 100%);
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+
+.bus__week_table tr.body td .situation.start__now:hover .control__body a {
+  padding: 10px;
+}
+
+.bus__week_table tr.body td .situation.start__now:hover .control__body::after {
+  border-bottom: 9px solid #5A75CC;
+}
+
 .bus__week_table tr.body td .situation.free:hover {
   background: linear-gradient(84.91deg, rgba(55, 199, 86, 0.3) 8.18%, rgba(49, 103, 67, 0.3) 90.36%);
 }
@@ -3344,5 +3404,700 @@ span.per__line {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+.my_zone_plus {
+  border: 1px solid transparent;
+  border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+  padding: 15px;
+}
+
+.employes {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.employes h4 {
+  padding: 15px;
+  padding-bottom: 0;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.employes p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 15px;
+}
+
+.employes strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.employes:hover strong {
+  transform: none;
+}
+
+.before__title_input {
+  position: relative;
+}
+
+.before__title_input:before {
+  content: 'Enter the code which we have sent to';
+  position: absolute;
+  top: 100%;
+  right: initial;
+  left: 0;
+  transform: translateY(100%);
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #EDEDED;
+  opacity: 0.7;
+}
+
+.top_title_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section_mini_title {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.employes_row {
+  margin-bottom: 60px;
+}
+
+.bus__week_nav {
+  overflow-x: scroll;
+}
+
+.colors__control {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.colors__control .color {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 40px;
+  flex-shrink: 0;
+  margin-bottom: 60px;
+}
+
+.colors__control .color .color__drob {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(134.7deg, #FFFFFF 1.24%, rgba(255, 255, 255, 0) 99.25%) 10;
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+.colors__control .color .color__drob.dark {
+  background: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.colors__control .color .color__drob.green {
+  background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+}
+
+.colors__control .color .color__drob.red {
+  background: #F14141;
+}
+
+.colors__control .color .color__drob.blue {
+  background: linear-gradient(270deg, #234396 0%, #6D86DE 100%);
+}
+
+.colors__control .color p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+
+.monitoring__tabel_control {
+  min-width: 130px !important;
+}
+
+.this__time {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.sport__comp__imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.sport__comp__imgs .img_wrap {
+  width: 169px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px 15px;
+  position: relative;
+}
+
+.sport__comp__imgs .img_wrap .img_cont {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sport__comp__imgs .img_wrap .kres {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #09142388;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.sport__comp__imgs .img_wrap .kres img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transform: scale(0);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.sport__comp__imgs .img_wrap:hover .kres {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sport__comp__imgs .img_wrap:hover .kres img {
+  transform: scale(1);
+}
+
+.uploat__input {
+  margin-bottom: 60px;
+}
+
+.uploat__input_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 23px;
+  border: 1px dashed #F16B41;
+}
+
+.uploat__input_label .context {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.uploat__input_label .context img {
+  margin-right: 15px;
+}
+
+.uploat__input_label .context .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploat__input_label .context .text strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.uploat__input_label .context .text p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #EDEDED;
+  opacity: 0.5;
+}
+
+.uploat__input_label a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 30px;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.btn_mini {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: auto;
+  color: #FFFFFF;
+  width: initial;
+  padding: 0 30px;
+}
+
+.btn_mini:hover {
+  color: #FFFFFF;
+}
+
+.monitoring__row_mini_section {
+  margin-bottom: 30px;
+}
+
+.description h4 {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.description .description__body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.description .description__body img {
+  opacity: 0.5;
+  margin-right: 10px;
+}
+
+.description .description__body p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+.situation__ontime_card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 15px 15px 15px 27px;
+  position: relative;
+  background: linear-gradient(115.22deg, #191926 0%, #263344 100.47%);
+  box-shadow: 0px 20px 20px rgba(8, 1, 49, 0.41);
+  border: 1px solid;
+  border-image: linear-gradient(114.9deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+  margin-bottom: 20px;
+}
+
+.situation__ontime_card .left_line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+}
+
+.situation__ontime_card .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.situation__ontime_card .content strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.situation__ontime_card .content p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  color: #EDEDED;
+}
+
+.situation__ontime_card .content p img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.situation__ontime_card .click__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 16px 48px;
+  background: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
+  border: 2px solid;
+  border-image: linear-gradient(109.8deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) 10;
+}
+
+.situation__ontime_card.green .left_line {
+  background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+}
+
+.situation__ontime_card.green .click__btn {
+  background: linear-gradient(84.91deg, #37C756 8.18%, #316743 90.36%);
+}
+
+.situation__ontime_card.blue .left_line {
+  background: linear-gradient(270deg, #234396 0%, #6D86DE 100%);
+}
+
+.situation__ontime_card.blue .click__btn {
+  background: linear-gradient(270deg, #234396 0%, #6D86DE 100%);
+}
+
+.zona__type_card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 20px;
+  background-image: url("../img/zone__catd_bg1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.zona__type_card.played {
+  background-image: url("../img/zone__catd_bg2.jpg");
+}
+
+.zona__type_card.canseled {
+  background-image: url("../img/zone__catd_bg3.jpg");
+}
+
+.zona__type_card p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.zona__type_card strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.regist__past__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.regist__past__title .controllers {
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid;
+  border-image: linear-gradient(90.99deg, rgba(255, 255, 255, 0.5) 0.09%, rgba(255, 255, 255, 0) 100%) 10;
+}
+
+.regist__past__title .controllers a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.regist__past__title .controllers a.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.doughnut__diagram {
+  padding: 40px 30px;
+  border: 2px solid;
+  border-image: linear-gradient(90.99deg, rgba(255, 255, 255, 0.5) 0.09%, rgba(255, 255, 255, 0) 100%) 10;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.doughnut__diagram .regist__past__title {
+  margin-bottom: 40px;
+}
+
+.doughnut__diagram .doughnut__diagram_sircule {
+  position: relative;
+}
+
+.doughnut__diagram .doughnut__diagram_sircule .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.doughnut__diagram .doughnut__diagram_sircule .text p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.doughnut__diagram .doughnut__diagram_sircule .text strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item .number {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-right: 11px;
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item .item_body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item .item_body .to_from {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item .item_body .to_from span {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item .item_body .line {
+  display: flex;
+  justify-content: flex-start;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.doughnut__diagram .doughnut__diagram__stat .item .item_body .line .line_pros {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(270deg, #234396 0%, #6D86DE 100%);
+}
+
+.doughnut__diagram_row {
+  align-items: center;
+}
+
+.personal__nav span.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.notification_cards .click__btn {
+  padding: 16px 28px;
+  margin-left: 16px;
+}
+
+.notification_cards .click__btn:nth-of-type(1) {
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%) 10;
+}
+
+.notification_cards.disabled .click__btn:nth-of-type(1) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notification_cards.disabled .click__btn:nth-of-type(2) {
+  opacity: 0.5;
+  cursor: none;
+}
+
+.situation__ontime_card.booking_card {
+  justify-content: space-between;
+}
+
+.situation__ontime_card.booking_card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0;
+}
+
+.situation__ontime_card.booking_card .content strong {
+  margin: 0;
+}
+
+.situation__ontime_card .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.situation__ontime_card .infos p {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  color: #EDEDED;
+  margin-bottom: 12px;
+}
+
+.situation__ontime_card .infos strong {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.booking__data__title {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */
