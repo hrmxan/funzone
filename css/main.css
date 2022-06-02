@@ -1531,6 +1531,7 @@ body.login {
   background: transparent;
   height: 100%;
   outline: none;
+  width: 100%;
   font-family: 'TT Hoves';
   font-style: normal;
   font-weight: 400;
