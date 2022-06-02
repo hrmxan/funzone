@@ -229,6 +229,8 @@
 
       .time_line {
         display: flex;
+        width: 100%;
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;
         margin-bottom: 25px;
@@ -240,6 +242,16 @@
           font-size: 24px;
           line-height: 28px;
           color: #FFFFFF;
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: center;
+          span {
+            display: flex;
+            min-width: 30px;
+            justify-content: center;
+          }
         }
       }
 

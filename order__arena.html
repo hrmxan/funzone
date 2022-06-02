@@ -14,6 +14,7 @@
 
 <body>
   <div class="body__filterbg">
+    <div class="close__action"></div>
     <div class="red"></div>
     <div class="blue"></div>
     <div class="green"></div>
@@ -23,7 +24,7 @@
     <section id="colapsBar" class="colapse-menu navbar_colapse_bar">
       <div class=" container">
         <ul class="navbar_list_bar">
-          <li class="navbar_item"><a href="#">Order arena</a></li>
+          <li class="navbar_item"><a href="order__arena.html">Order arena</a></li>
           <li class="navbar_item"><a href="#">Features</a></li>
           <li class="navbar_item"><a href="#">About us</a></li>
         </ul>
@@ -44,7 +45,7 @@
         </a>
         <div class="navbar_colapse d-none d-lg-flex">
           <ul class="navbar_list">
-            <li class="navbar_item"><a href="#">Order arena</a></li>
+            <li class="navbar_item"><a href="order__arena.html">Order arena</a></li>
             <li class="navbar_item"><a href="#">Features</a></li>
             <li class="navbar_item"><a href="#">About us</a></li>
           </ul>
@@ -53,11 +54,11 @@
           </a>
         </div>
         <div class="reg__log">
-          <a class="business d-none d-lg-flex" href="#">Apply As Business</a>
+          <a class="business d-none d-lg-flex" href="businus__login.html">Apply As Business</a>
           <a class="login d-none d-lg-flex" href="login.html">
             <span>Log In</span>
           </a>
-          <a class="d-flex d-lg-none" href="#">
+          <a class="d-flex d-lg-none" href="login.html">
             <img src="./img/svg/log_user.svg" alt="user">
           </a>
         </div>
@@ -80,7 +81,7 @@
             <div class="filter__top"></div>
             <div class="filter__body">
               <div class="filter_select">
-                <span>Sport</span>
+                <span class="value">Sport</span>
                 <img src="./img/svg/vniz.svg" alt="vniz_ic">
                 <div class="drobdow_sort sport">
                   <label for="radio1">
@@ -107,16 +108,16 @@
                 <div class="drobdow_sort time">
                   <h3 class="full">Starting time <span></span></h3>
                   <div class="time_line">
-                    <a href="#" class="mute_buttons">
+                    <a href="#" class="mute_buttons prev">
                       <img src="./img/svg/left.svg" alt="left">
                     </a>
-                    <p>12 : 30</p>
-                    <a href="#" class="mute_buttons">
+                    <p><span class="hour">12</span> : <span class="min">30</span></p>
+                    <a href="#" class="mute_buttons next">
                       <img src="./img/svg/right.svg" alt="left">
                     </a>
                   </div>
                   <h3 class="end">End time <span></span></h3>
-                  <a class="mute_buttons button-full" href="#">Next</a>
+                  <a class="mute_buttons button-full time_line_submit" href="#">Next</a>
                 </div>
               </div>
               

@@ -75,6 +75,7 @@ li {
   &:hover {
     background-image: linear-gradient(98.07deg, #F16B41 0.71%, #C51841 100%);
     border-image: linear-gradient(50deg, #fad3c7, #C51841) 10;
+    color: white;
   }
 }
 
@@ -97,6 +98,7 @@ li {
     background-image: linear-gradient(98.07deg, #f16a4100 0.71%, #c5184000 100%);
     ;
     border-image: linear-gradient(90deg, #F16B41, #C51841) 10;
+    color: white;
   }
 }
 
@@ -150,5 +152,18 @@ li {
     background: #F24CA6;
     opacity: 0.7;
     filter: blur(150px);
+  }
+}
+.close__action {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 2;
+  &.close__wait {
+    visibility: visible;
   }
 }

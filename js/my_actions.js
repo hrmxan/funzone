@@ -153,7 +153,6 @@ try {
   let sliderMaxValue = document.getElementById("slider-1").max;
   let range_btn1 = sliderTrack.childNodes[1];
   let range_btn2 = sliderTrack.childNodes[3];
-  console.log(range_btn1, range_btn2);
 
   function slideOne() {
     try {
@@ -191,19 +190,38 @@ try {
 }
 try {
   let filter_select = document.querySelectorAll('.filter_select');
+  let filter_select_body__items = filter_select[0].querySelectorAll('.filter__body label');
+  let close__action = document.querySelector('.close__action');
+  close__action.addEventListener('click', () => {
+    filter_select.forEach(item => {
+      item.classList.remove('drobon');
+    });
+    close__action.classList.remove('close__wait');
+  });
+
+  filter_select_body__items.forEach(item => {
+    item.addEventListener('click', () => {
+      filter_select_body__items = filter_select[0].querySelector('.value').innerText = item.querySelector('span').innerText
+    });
+  });
+
 
   filter_select.forEach(item => {
     item.addEventListener('click', () => {
       filter_select.forEach(e => {
         if (e != item) e.classList.remove('drobon');
       });
-      item.classList.toggle('drobon');
+      close__action.classList.add('close__wait');
+      item.classList.add('drobon');
 
     });
   });
-} catch (error) {
+} catch (error) {}
 
-}
+
+
+
+// swipper js
 try {
   let swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
@@ -220,6 +238,55 @@ try {
       prevEl: ".swiper-button-prev",
     },
   });
+} catch (error) {
+
+}
+
+// select time control
+
+try {
+  let select__time__con = document.querySelector('.filter_select .time .time_line');
+  let time__cont_prev = select__time__con.querySelector('a.prev');
+  let time__cont_next = select__time__con.querySelector('a.next');
+  let time__cont_hour = select__time__con.querySelector('span.hour');
+  let time__cont_min = select__time__con.querySelector('span.min');
+  let time_line_submit = document.querySelector('.time_line_submit');
+
+  time__cont_next.addEventListener('click', () => {
+    time__cont_min.innerText = parseInt(time__cont_min.innerText) + 30;
+    if (time__cont_min.innerText >= 60) {
+      time__cont_min.innerText = 0;
+      time__cont_hour.innerText = parseInt(time__cont_hour.innerText) + 1;
+    }
+    if (time__cont_hour.innerText >= 24) {
+      time__cont_hour.innerText = 0;
+    }
+  });
+  time__cont_prev.addEventListener('click', () => {
+    time__cont_min.innerText = parseInt(time__cont_min.innerText) - 30;
+    if (time__cont_min.innerText < 0) {
+      time__cont_min.innerText = 30;
+      time__cont_hour.innerText = parseInt(time__cont_hour.innerText) - 1;
+    }
+    if (time__cont_hour.innerText <= 0) {
+      time__cont_hour.innerText = 23;
+    }
+  });
+  let onsubmit = false;
+  time_line_submit.addEventListener('click', () => {
+    time_line_submit.parentElement.querySelectorAll('h3').forEach(item => {
+      item.classList.toggle('full');
+    });
+    onsubmit = !onsubmit;
+    if (onsubmit) {
+      time_line_submit.innerText = 'Ok';
+    } else {
+      time_line_submit.innerText = 'Next';
+    }
+  });
+  
+
+
 } catch (error) {
 
 }
@@ -248,7 +315,6 @@ try {
     let mause_in = false;
     item.addEventListener('mousedown', () => {
       mause_in = true;
-      console.log(mause_in);
       let time_spans = document.querySelectorAll('.insport__table .bookeding span');
       if (mause_in) {
         time_spans.forEach(e => {
@@ -262,11 +328,9 @@ try {
     });
     item.addEventListener('mouseup', () => {
       mause_in = false;
-      console.log(mause_in);
     });
     item.addEventListener('mouseleave', () => {
       mause_in = false;
-      console.log(mause_in);
     });
   });
 } catch (error) {
@@ -311,47 +375,60 @@ try {
 
 }
 try {
-  let data = [2000000,900000,561651,5619656,9000000,10000000,6000000,6519616,7165651,19166512,1655155,9819156];
+  let data = [2000000, 900000, 561651, 5619656, 9000000, 10000000, 6000000, 6519616, 7165651, 19166512, 1655155, 9819156];
   let data2 = [72, 28]
-  
-let ctx = document.getElementById('myChart');
-let myChart = new Chart(ctx, {
+
+  let ctx = document.getElementById('myChart');
+  let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-        datasets: [{
-            label: 'Max:',
-            data: data,
-            backgroundColor: [
-              '#0B6BFB'
-            ],
-        }]
+      labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+      datasets: [{
+        label: 'Max:',
+        data: data,
+        backgroundColor: [
+          '#0B6BFB'
+        ],
+      }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
+      scales: {
+        y: {
+          beginAtZero: true
         }
+      }
     }
-});
-let ctx2 = document.getElementById('myChart2');
-let myChart2 = new Chart(ctx2, {
-  type: 'doughnut',
+  });
+  let ctx2 = document.getElementById('myChart2');
+  let myChart2 = new Chart(ctx2, {
+    type: 'doughnut',
     data: {
-        // labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-        datasets: [{
-            data: data2,
-            backgroundColor: [
-              '#0B6BFB',
-              'rgba(27, 27, 27, 0.5)'
-            ],
-            borderWidth: 0
-        }]
+      // labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+      datasets: [{
+        data: data2,
+        backgroundColor: [
+          '#0B6BFB',
+          'rgba(27, 27, 27, 0.5)'
+        ],
+        borderWidth: 0
+      }]
     },
-});
+  });
 
 
+} catch (error) {
+
+}
+try {
+  let bus__week_nav_item = document.querySelectorAll('.bus__week_nav a');
+  bus__week_nav_item.forEach(item => {
+    item.addEventListener('click', () => {
+      bus__week_nav_item.forEach(e => {
+        e.classList.remove('active');
+      });
+      item.classList.add('active');
+    });
+  });
 } catch (error) {
 
 }

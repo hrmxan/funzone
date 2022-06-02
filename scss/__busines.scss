@@ -486,6 +486,7 @@
             line-height: 14px;
             text-align: center;
             color: #FFFFFF;
+
             span {
               font-weight: bold;
             }
@@ -502,6 +503,7 @@
             .left_time {
               display: block;
             }
+
             &:hover {
 
               .control__body {
@@ -509,9 +511,11 @@
                 opacity: 1;
                 visibility: visible;
                 top: 50%;
+
                 a {
                   padding: 10px;
                 }
+
                 &::after {
                   border-bottom: 9px solid #5A75CC;
                 }
@@ -700,4 +704,14 @@
     color: #EDEDED;
     opacity: 0.7;
   }
+}
+
+.aboute__input_conf {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration-line: underline;
+  color: #EDEDED;
 }
