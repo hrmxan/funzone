@@ -91,6 +91,7 @@ span.per__line {
 
   @media (max-width: 767px) {
     flex-direction: row;
+    overflow-x: scroll;
 
     li {
       a {

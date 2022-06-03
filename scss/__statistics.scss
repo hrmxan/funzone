@@ -98,6 +98,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   padding: 15px 20px;
   background-image: url('../img/zone__catd_bg1.jpg');
   background-size: cover;
@@ -174,6 +175,10 @@
 
   border-image: linear-gradient(90.99deg, rgba(255, 255, 255, 0.5) 0.09%, rgba(255, 255, 255, 0) 100%) 10;
   background: rgba(255, 255, 255, 0.15);
+
+  .doughnut__diagram_row {
+    margin-bottom: 0;
+  }
 
   .regist__past__title {
     margin-bottom: 40px;
@@ -270,6 +275,12 @@
           }
         }
       }
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 15;
+    .doughnut__diagram_sircule {
+      margin-bottom: 30px;
     }
   }
 }
