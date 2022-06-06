@@ -162,6 +162,10 @@ li {
   visibility: visible;
 }
 
+input {
+  letter-spacing: 2px;
+}
+
 header nav {
   display: flex;
   justify-content: space-between;

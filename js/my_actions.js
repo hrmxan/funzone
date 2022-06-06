@@ -44,7 +44,9 @@ try {
   accardion.forEach(item => {
     item.addEventListener('click', () => {
       accardion.forEach(e => {
-        e.classList.add('closed');
+        if (e !== item) {
+          e.classList.add('closed');
+        }
       });
       item.classList.toggle('closed');
     });
