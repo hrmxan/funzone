@@ -325,7 +325,6 @@ try {
         value.innerText = e.querySelector('span').innerText;
       });
     });
-    // console.log(options);
   });
 
 }catch (error) {}
@@ -502,10 +501,8 @@ let swiperSlydes = document.querySelectorAll('.swiper-slide');
 swiperSlydes.forEach(item => {
   item.addEventListener('click', () => {
     document.querySelector(item.getAttribute('data-slide')).src = item.querySelector('img').src;
-    console.log();
   });
 });
-
 try {
   let st_controllers = document.querySelectorAll('.regist__past__title .controllers a')
 
