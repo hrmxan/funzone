@@ -57,8 +57,13 @@ try {
   let seen__pasword = document.querySelectorAll('.seen__pasword');
   seen__pasword.forEach(item => {
     item.addEventListener('click', () => {
-      if (item.parentElement.childNodes[3].type == 'text') item.parentElement.childNodes[3].type = 'password';
-      else item.parentElement.childNodes[3].type = 'text';
+      if (item.parentElement.childNodes[3].type == 'text') {
+        item.parentElement.childNodes[3].type = 'password';
+        item.src = './img/svg/unseen.svg';
+      } else {
+        item.parentElement.childNodes[3].type = 'text';
+        item.src = './img/svg/seen_see.svg';
+      }
     });
   });
 } catch (error) {
@@ -189,11 +194,18 @@ try {
 
 }
 try {
+
+
+
+
+  // fiilter selekt dropdown
   let filter_select = document.querySelectorAll('.filter_select');
+  let filter_select_view = document.querySelectorAll('.filter_select .view__select');
+  let filter_select_sort = document.querySelectorAll('.filter_select .drobdow_sort');
   let filter_select_body__items = filter_select[0].querySelectorAll('.filter__body label');
   let close__action = document.querySelector('.close__action');
   close__action.addEventListener('click', () => {
-    filter_select.forEach(item => {
+    filter_select_sort.forEach(item => {
       item.classList.remove('drobon');
     });
     close__action.classList.remove('close__wait');
@@ -205,18 +217,118 @@ try {
     });
   });
 
-
-  filter_select.forEach(item => {
+  filter_select_view.forEach(item => {
     item.addEventListener('click', () => {
-      filter_select.forEach(e => {
+      filter_select_sort.forEach(e => {
         if (e != item) e.classList.remove('drobon');
       });
       close__action.classList.add('close__wait');
-      item.classList.add('drobon');
-
+      // item.classList.add('drobon');
+      item.parentElement.querySelector('.drobdow_sort').classList.add('drobon');
     });
   });
+
+  // select time control
+  let time_line = true;
+
+  try {
+    if (time_line) {
+      let value_time = document.querySelector('.filter_select .value_time');
+      let select__time__con = document.querySelector('.filter_select .time .time_line');
+      let time__cont_prev = select__time__con.querySelector('a.prev');
+      let time__cont_next = select__time__con.querySelector('a.next');
+      let time__cont_hour = select__time__con.querySelector('span.hour');
+      let time__cont_min = select__time__con.querySelector('span.min');
+      let time_line_submit = document.querySelector('.time_line_submit');
+      
+      time_hour = '00';
+      time_minut = '00';
+      time_start = '';
+      time_end = '';
+
+      time__cont_next.addEventListener('click', () => {
+        time__cont_min.innerText = parseInt(time__cont_min.innerText) + 30;
+        if (time__cont_min.innerText >= 60) {
+          time__cont_min.innerText = 0;
+          time__cont_hour.innerText = parseInt(time__cont_hour.innerText) + 1;
+        }
+        if (time__cont_hour.innerText >= 24) {
+          time__cont_hour.innerText = 0;
+        }
+      });
+      time__cont_prev.addEventListener('click', () => {
+        time__cont_min.innerText = parseInt(time__cont_min.innerText) - 30;
+        if (time__cont_min.innerText < 0) {
+          time__cont_min.innerText = 30;
+          time__cont_hour.innerText = parseInt(time__cont_hour.innerText) - 1;
+        }
+        if (time__cont_hour.innerText <= 0) {
+          time__cont_hour.innerText = 23;
+        }
+      });
+      let onsubmit = 0;
+      time_line_submit.addEventListener('click', () => {
+        time_line_submit.parentElement.querySelectorAll('h3').forEach(item => {
+          item.classList.toggle('full');
+        });
+        if (onsubmit == 1) {
+          time_line_submit.parentElement.classList.remove('drobon')
+          close__action.classList.remove('close__wait');
+          // onsubmit = false;
+          onsubmit = 0;
+          time_line_submit.parentElement.classList.remove('drobon');
+          
+          setTimeout(()=>{
+            time_line_submit.innerText = 'Next';
+          },500)
+          time_hour = time__cont_hour.innerText < 10 ? '0' + time__cont_hour.innerText : '' + time__cont_hour.innerText;
+
+          time_minut = time__cont_min.innerText < 10 ? '0' + time__cont_min.innerText : '' + time__cont_min.innerText;
+
+          time_end = `${time_hour}: ${time_minut}`;
+        } else {
+          time_line_submit.innerText = 'Ok';
+          time_hour = time__cont_hour.innerText < 10 ? '0' + time__cont_hour.innerText : '' + time__cont_hour.innerText;
+          
+          time_minut = time__cont_min.innerText < 10 ? '0' + time__cont_min.innerText : '' + time__cont_min.innerText;
+
+          time_start = `${time_hour}: ${time_minut}`;
+          onsubmit++;
+        }
+        if (time_start || time_end) {
+          value_time.innerText = `${time_start} - ${time_end}`;
+        } else {
+          value_time.innerText = "Starting time";
+        }
+      });
+    }
+
+  } catch (error) {
+    // 
+  }
+  
+  
+  
+  
 } catch (error) {}
+
+
+//  employes and select control
+
+try {
+  let my__select = document.querySelectorAll('.my__select');
+  my__select.forEach(item => {
+    let value = item.querySelector('.select__value');
+    let options = item.querySelectorAll('.select__options label');
+    options.forEach(e => {
+      e.addEventListener('click', () => {
+        value.innerText = e.querySelector('span').innerText;
+      });
+    });
+    // console.log(options);
+  });
+
+}catch (error) {}
 
 
 
@@ -242,54 +354,7 @@ try {
 
 }
 
-// select time control
 
-try {
-  let select__time__con = document.querySelector('.filter_select .time .time_line');
-  let time__cont_prev = select__time__con.querySelector('a.prev');
-  let time__cont_next = select__time__con.querySelector('a.next');
-  let time__cont_hour = select__time__con.querySelector('span.hour');
-  let time__cont_min = select__time__con.querySelector('span.min');
-  let time_line_submit = document.querySelector('.time_line_submit');
-
-  time__cont_next.addEventListener('click', () => {
-    time__cont_min.innerText = parseInt(time__cont_min.innerText) + 30;
-    if (time__cont_min.innerText >= 60) {
-      time__cont_min.innerText = 0;
-      time__cont_hour.innerText = parseInt(time__cont_hour.innerText) + 1;
-    }
-    if (time__cont_hour.innerText >= 24) {
-      time__cont_hour.innerText = 0;
-    }
-  });
-  time__cont_prev.addEventListener('click', () => {
-    time__cont_min.innerText = parseInt(time__cont_min.innerText) - 30;
-    if (time__cont_min.innerText < 0) {
-      time__cont_min.innerText = 30;
-      time__cont_hour.innerText = parseInt(time__cont_hour.innerText) - 1;
-    }
-    if (time__cont_hour.innerText <= 0) {
-      time__cont_hour.innerText = 23;
-    }
-  });
-  let onsubmit = false;
-  time_line_submit.addEventListener('click', () => {
-    time_line_submit.parentElement.querySelectorAll('h3').forEach(item => {
-      item.classList.toggle('full');
-    });
-    onsubmit = !onsubmit;
-    if (onsubmit) {
-      time_line_submit.innerText = 'Ok';
-    } else {
-      time_line_submit.innerText = 'Next';
-    }
-  });
-  
-
-
-} catch (error) {
-
-}
 
 
 // calendar in sport
@@ -432,3 +497,24 @@ try {
 } catch (error) {
 
 }
+
+let swiperSlydes = document.querySelectorAll('.swiper-slide');
+swiperSlydes.forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelector(item.getAttribute('data-slide')).src = item.querySelector('img').src;
+    console.log();
+  });
+});
+
+try {
+  let st_controllers = document.querySelectorAll('.regist__past__title .controllers a')
+
+  st_controllers.forEach(e=>{
+    e.addEventListener('click',()=>{
+      st_controllers.forEach(element => {
+        element.classList.remove('active');
+      });
+      e.classList.add('active');
+    })
+  })
+} catch {}

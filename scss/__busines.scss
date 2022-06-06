@@ -70,6 +70,8 @@
   position: relative;
 
   .select__options {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: calc(100% + 20px);
     opacity: 0;

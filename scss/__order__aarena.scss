@@ -106,6 +106,7 @@
   flex-shrink: 0;
   margin-right: 20px;
   position: relative;
+  z-index: 10;
 
   &:last-child {
     margin-right: 0;
@@ -120,7 +121,6 @@
   background: rgba(255, 255, 255, 0.15);
   border: 2px solid transparent;
   border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) 10;
-  padding: 0 10px 0 15px;
   height: 54px;
   align-items: center;
   font-family: 'TT Hoves';
@@ -128,8 +128,18 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-
+  
   color: #FFFFFF;
+  
+  .view__select {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 15px;
+    cursor: pointer;
+  }
 
   img {
     width: 24px;
@@ -138,14 +148,7 @@
     object-fit: contain;
   }
 
-  &.drobon {
-    .drobdow_sort {
-      top: calc(100% + 20px);
-      visibility: visible;
-      opacity: 1;
-      z-index: 10;
-    }
-  }
+
 
   .drobdow_sort {
     position: absolute;
@@ -162,6 +165,12 @@
     transition: 0.5s;
     border-image-source: linear-gradient(114.9deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 50%) 10;
 
+    &.drobon {
+      top: calc(100% + 20px);
+      visibility: visible;
+      opacity: 1;
+      z-index: 10;
+    }
 
 
     &.sport {
@@ -186,6 +195,7 @@
         line-height: 24px;
         color: #FFFFFF;
         margin-bottom: 25px;
+        cursor: pointer;
 
         span {
           display: flex;
@@ -248,6 +258,7 @@
           align-items: center;
           flex-direction: row;
           justify-content: center;
+
           span {
             display: flex;
             min-width: 30px;

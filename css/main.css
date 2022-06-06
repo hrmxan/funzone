@@ -1588,12 +1588,12 @@ body.login {
   flex-shrink: 0;
   margin-right: 20px;
   position: relative;
+  z-index: 10;
   display: flex;
   position: relative;
   background: rgba(255, 255, 255, 0.15);
   border: 2px solid transparent;
   border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) 10;
-  padding: 0 10px 0 15px;
   height: 54px;
   align-items: center;
   font-family: 'TT Hoves';
@@ -1614,18 +1614,21 @@ body.login {
   }
 }
 
+.filter_select .view__select {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 0 15px;
+  cursor: pointer;
+}
+
 .filter_select img {
   width: 24px;
   height: 24px;
   margin-left: 5px;
   object-fit: contain;
-}
-
-.filter_select.drobon .drobdow_sort {
-  top: calc(100% + 20px);
-  visibility: visible;
-  opacity: 1;
-  z-index: 10;
 }
 
 .filter_select .drobdow_sort {
@@ -1642,6 +1645,13 @@ body.login {
   z-index: 9;
   transition: 0.5s;
   border-image-source: linear-gradient(114.9deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 50%) 10;
+}
+
+.filter_select .drobdow_sort.drobon {
+  top: calc(100% + 20px);
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
 }
 
 .filter_select .drobdow_sort.sport {
@@ -1665,6 +1675,7 @@ body.login {
   line-height: 24px;
   color: #FFFFFF;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .filter_select .drobdow_sort.sport label span {
@@ -2904,6 +2915,8 @@ span.per__line {
 }
 
 .my__select .select__options {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: calc(100% + 20px);
   opacity: 0;
@@ -4155,5 +4168,33 @@ span.per__line {
   line-height: 14px;
   color: #FFFFFF;
   margin-bottom: 20px;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+input[type="time"] {
+  position: relative;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
 }
 /*# sourceMappingURL=main.css.map */
