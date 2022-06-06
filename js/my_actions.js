@@ -515,3 +515,28 @@ try {
     })
   })
 } catch {}
+
+try {
+  let price = document.querySelector('.filter_select.price');
+
+  let price_labels = price.querySelectorAll('.drobdow_sort .radio__labels');
+
+  price_labels.forEach(e => {
+    e.addEventListener('click', () => {
+      if (e.querySelector('input').value == 'on') {
+        price.querySelector('.price__val').innerHTML = e.querySelector('.value').innerHTML;
+      }
+    });
+  });
+
+  let sort = document.querySelector('.filter_select.sort');
+
+  let sort_labels = sort.querySelectorAll('.drobdow_sort .radio__labels');
+  sort_labels.forEach(e => {
+    e.addEventListener('click', () => {
+      if (e.querySelector('input').value == 'on') {
+        sort.querySelector('.sort__val').innerHTML = e.querySelector('.value').innerHTML;
+      }
+    });
+  });
+} catch {}
