@@ -2127,7 +2127,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   display: flex;
   width: 16px;
   height: 16px;
-  background-image: url("../../img/svg/star_full.svg");
+  background-image: url("../img/svg/star_full.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2138,7 +2138,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   display: flex;
   width: 16px;
   height: 16px;
-  background-image: url("../../img/svg/star_free.svg");
+  background-image: url("../img/svg/star_free.svg");
   display: flex;
   background-size: contain;
   background-repeat: no-repeat;
